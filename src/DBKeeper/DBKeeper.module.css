@@ -1,0 +1,50 @@
+.container{
+    background-color: hsl(213, 46%, 12%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+.setting{
+    background-color: hsl(213, 46%, 12%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+.banner{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.sturn{
+    color: white;
+    font-size: 5vw;
+    background-color: hsla(208, 100%, 97%, 0);
+}
+.face{
+    height: clamp(10vw,60vw, 300px);
+    font-size: clamp(1rem, 25vw, 200px);
+    color: white;
+    font-family: monospace;
+    align-self: center;
+    border-radius: 5px;
+    background-color: hsla(208, 100%, 97%, 0);
+}
+.timeset{
+    color: white;
+    font-family: 'Cambria';    
+    background-color: hsla(208, 100%, 97%, 0);
+}
+.timeset input{
+    color: white;
+    font-family: Cambria;
+}
+.poi{
+    width: 30vw;
+    align-self: center;
+    margin: 5px;
+    font-family: Cambria;
+    font-weight: bold;
+}

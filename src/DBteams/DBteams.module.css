@@ -1,0 +1,25 @@
+:root{
+    --inputBC: hsl(0, 0%, 80%);
+}
+li{
+    display: flex;
+}
+span{
+    color:white;
+    background-color: var(--pbrandC);
+    padding: 6px;
+    margin-top: 10px;
+    border-radius: 2px;
+    display: inline-block;
+    width: clamp(20px, 25vw, 30vw);
+}
+select, input{
+    background-color:var(--inputBC);
+    width: 20vw;
+    border-radius: 3px;
+}
+
+.tims{
+    display: flex;
+    flex-direction: column;
+}
