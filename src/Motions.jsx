@@ -25,7 +25,7 @@ function Motions(){
             ref={searchRef}/>
             <button style={{padding:'5px'}} onClick={searchMotion}><Search size={'1.5rem'}/></button>
         </div>
-
+        <div></div>
         </>
     )
 }
