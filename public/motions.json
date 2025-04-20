@@ -3,49 +3,49 @@
       "motion": "THW ban political donations from corporations and unions.",
       "theme": "Politics",
       "infoslide": "",
-      "type": "THW"
+      "type": "Policy"
     },
     {
       "motion": "THBT developing countries should prioritize climate resilience over economic growth.",
       "theme": "Environment",
       "infoslide": "",
-      "type": "THBT"
+      "type": "Value"
     },
     {
       "motion": "THR the glorification of entrepreneurship in popular media.",
       "theme": "Economics",
       "infoslide": "",
-      "type": "THR"
+      "type": "Comparative"
     },
     {
       "motion": "THW allow prisoners to volunteer for medical trials in exchange for reduced sentences.",
       "theme": "Law",
       "infoslide": "",
-      "type": "THW"
+      "type": "Policy"
     },
     {
       "motion": "THO the narrative that true love conquers all.",
       "theme": "Culture",
       "infoslide": "",
-      "type": "THO"
+      "type": "Value"
     },
     {
       "motion": "THBT social media platforms should aggressively deplatform political extremists.",
       "theme": "Media",
       "infoslide": "",
-      "type": "THBT"
+      "type": "Value"
     },
     {
       "motion": "THW give parents the right to genetically enhance their unborn children.",
       "theme": "Ethics",
       "infoslide": "",
-      "type": "THW"
+      "type": "Policy"
     },
     {
       "motion": "THBT the West should stop trying to promote liberal democracy abroad.",
       "theme": "International Relations",
       "infoslide": "",
-      "type": "THBT"
+      "type": "Value"
     },
     {
       "motion": "TH prefers a world where people believe life has no inherent purpose.",
@@ -57,680 +57,980 @@
       "motion": "THBT universities should use lotteries instead of competitive admissions.",
       "theme": "Education",
       "infoslide": "",
-      "type": "THBT"
+      "type": "Value"
     },
     {
         "motion": "THW eliminate all patents on life-saving medicines.",
         "theme": "Health",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT there should be a universal basic income for all citizens.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW prioritize the protection of endangered species over human development.",
         "theme": "Environment",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW require all news outlets to provide equal airtime to political candidates in the lead-up to elections.",
         "theme": "Media",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW ban all forms of surveillance capitalism.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the United Nations should have the authority to enforce international law with military intervention.",
         "theme": "International Relations",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW require all public officials to disclose their financial holdings.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THR the concept of 'self-care' as a capitalist marketing strategy.",
         "theme": "Culture",
         "infoslide": "",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THW mandate that all public school curricula include comprehensive sex education.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the state should control the media to ensure it serves the public interest.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
 
     {
         "motion": "THBT all countries should adopt a four-day workweek.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW allow students to grade their teachers.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT governments should use predictive policing technology.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW decriminalize the consumption of all drugs.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THR the idea of 'national identity' as a concept.",
         "theme": "Philosophy",
         "infoslide": "",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THW make voting mandatory in all democratic elections.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW abolish all forms of intellectual property.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT individuals should have the right to sell their organs.",
         "theme": "Ethics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW allow governments to monitor and censor private internet communications.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW mandate a global carbon tax to combat climate change.",
         "theme": "Environment",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW grant citizenship to all refugees who have been in a country for more than five years.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW make environmental education mandatory in all schools worldwide.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT artificial intelligence should be granted rights as if it were a human.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW require all companies to provide employees with paid mental health days.",
         "theme": "Health",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW ban the use of fossil fuels in transportation by 2050.",
         "theme": "Environment",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT individuals should be able to vote on specific pieces of legislation via direct democracy.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW end the practice of awarding academic grades based on exams alone.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THR the idea of corporate social responsibility.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THW ban all forms of capital punishment worldwide.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT democracy is incompatible with economic inequality.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW eliminate all private schools and make education fully public.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT states should recognize animal rights as equal to human rights.",
         "theme": "Ethics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW legalize euthanasia for terminally ill patients.",
         "theme": "Ethics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT governments should regulate all forms of artificial intelligence development.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW make climate change a central component of national security policies.",
         "theme": "Environment",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT global trade agreements should prioritize labor rights over economic growth.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW grant universal healthcare to all individuals, regardless of immigration status.",
         "theme": "Health",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW ban all forms of surveillance technology used by private corporations.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT nationalism is harmful to global cooperation and peace.",
         "theme": "International Relations",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW provide universal access to broadband internet as a basic human right.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     
     {
         "motion": "THBT governments should prioritize the welfare of future generations over the needs of current citizens.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW end the use of standardized testing as a measure of academic achievement.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW implement a global wealth tax to combat inequality.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT developed countries should provide reparations to countries historically affected by colonialism.",
         "theme": "International Relations",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW make the use of genetically modified organisms in food production illegal.",
         "theme": "Ethics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW abolish private ownership of land.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW ban all forms of corporate lobbying in political systems.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT humanity should focus on colonizing space as a way to ensure the long-term survival of the species.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW allow children under 16 to vote in national elections.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW abolish the concept of private property in favor of communal ownership.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT art should be judged solely on its intrinsic aesthetic value, not political or social impact.",
         "theme": "Art & Literature",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW nationalize all major social media platforms.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THR the use of moral arguments in climate activism.",
         "theme": "Environment",
         "infoslide": "",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THBT the feminist movement should embrace radical separatism.",
         "theme": "Gender & Sexuality",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW prohibit the use of AI-generated content in political campaigns.",
         "theme": "Media",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT war crimes trials do more harm than good in post-conflict societies.",
         "theme": "International Relations",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW ban the commercialization of religious symbols.",
         "theme": "Culture",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THO the romanticization of burnout culture in high-achieving industries.",
         "theme": "Health",
         "infoslide": "",
-        "type": "THO"
+        "type": "Value"
     },
     {
         "motion": "THW abolish constitutional monarchies.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the use of 'cancel culture' is a legitimate tool for social justice.",
         "theme": "Culture",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW implement quotas for minority representation in national legislatures.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the criminal justice system should prioritize restorative justice over retributive justice.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THO the belief that 'everything happens for a reason.'",
         "theme": "Philosophy",
         "infoslide": "",
-        "type": "THO"
+        "type": "Value"
     },
     {
         "motion": "THBT post-colonial states should reject Western models of development.",
         "theme": "International Relations",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW allow citizens to opt out of government data collection programs without penalty.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the criminalization of hate speech does more harm than good.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW prohibit the development of autonomous weapons.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT modern activism is overly reliant on performative tactics.",
         "theme": "Culture",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW make the right to internet access legally enforceable.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THO the portrayal of suffering as noble in religious and philosophical narratives.",
         "theme": "Philosophy",
         "infoslide": "",
-        "type": "THO"
+        "type": "Value"
     },
     {
         "motion": "THBT space exploration should be prioritized over deep-sea exploration.",
         "theme": "Science & Technology",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW ban for-profit prisons.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT emerging economies should adopt protectionist trade policies.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW not prosecute acts of civil disobedience motivated by moral conviction.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THR the use of historical trauma in branding national identity.",
         "theme": "Culture",
         "infoslide": "",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THBT in times of crisis, scientific experts should override elected officials in policymaking.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW give workers a binding vote in corporate board decisions.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THW ban religious organizations from receiving government funding.",
         "theme": "Religion & Society",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT satire should be protected even when it causes public outrage.",
         "theme": "Media",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW abolish the statute of limitations on all crimes.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the environmental movement should embrace nuclear energy.",
         "theme": "Environment",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW prohibit political donations from corporations and unions.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT sports leagues should impose salary caps on players.",
         "theme": "Sports & Society",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THO the glorification of entrepreneurship in modern society.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THO"
+        "type": "Value"
     },
     {
         "motion": "THW allow victims of crimes to determine sentencing within legal limits.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT environmental sabotage is a legitimate form of protest.",
         "theme": "Environment",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THR the use of national history curricula to promote patriotism.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THW provide tax exemptions only to non-profits that meet minimum social impact benchmarks.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the rise of influencer culture has undermined collective social action.",
         "theme": "Culture",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THBT children should be shielded from all religious indoctrination until adulthood.",
         "theme": "Religion & Society",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW ban all political advertising during election periods.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT the media should not report on the private lives of public figures.",
         "theme": "Media",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW impose a universal basic income funded by taxing automation.",
         "theme": "Economics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT indigenous communities should have full sovereignty over their ancestral lands.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW ban the use of facial recognition technology in public spaces.",
         "theme": "Technology",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT post-conflict societies should erase colonial-era monuments.",
         "theme": "Culture",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW prohibit algorithmic sentencing in the criminal justice system.",
         "theme": "Law",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT student activism should focus more on coalition-building than confrontation.",
         "theme": "Education",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THW allow cities to secede from their national governments under democratic conditions.",
         "theme": "Politics",
         "infoslide": "",
-        "type": "THW"
+        "type": "Policy"
     },
     {
         "motion": "THBT literature has a greater capacity than history to teach us about the past.",
         "theme": "Art & Literature",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THBT parenting should require a license",
         "theme": "Law",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THO the taste for frivolity",
         "theme": "Culture",
         "infoslide": "The 'taste for frivolity' refers to a social norm that encourages people not to take anything 'too seriously'. This expectation manifests in a demand to be ironic and entertaining, a preference for nonchalance and effortless image curation, and a stigma against earnest and formal behavior.",
-        "type": "THO"
+        "type": "Value"
     },
     {
         "motion": "THBT it would be unethical for you to press the button",
         "theme": "Ethics",
         "infoslide": "You are a 40-year-old, middle-income gay man, happily married to your partner for 10 years. Together, you co-own a two-bedroom apartment in Montreal's gay village and have a 5-year-old child. One day, a man contacts you with definitive proof that your husband has been cheating on you with him for over a year.Shortly after you initiate a divorce with your husband, you discover a button only you can see and press. If you press it, your current universe will be erased, and you will be transported to another universe where you had never divorced your husband and could never learn of his cheating. You would have no memory of pressing the button.",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THR the narrative that monetising sexuality is empowering for women",
         "theme": "Gender & Sexuality",
         "infoslide": "",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THS Vegan Terrorism",
         "theme": "Ethics",
         "infoslide": "Vegan terrorism is any act (peaceful or radical) that involves protesting against or freeing animals being reared for the sake of consumption.",
-        "type": "THS"
+        "type": "Value"
     },
     {
         "motion": "Assuming feasibility, THBT Po should sue Oogway",
         "theme": "Law",
         "infoslide": "The Dragon Scroll is a legendary scroll, written by Oogway (a legendary tortoise kung fu master) that supposedly contains the secret to 'limitless power'. Oogway declared that only the Dragon Warrior would be worthy enough to read the Dragon Scroll. Having passed tremendously difficult trials to qualify as the Dragon Warrior, Po eventually obtained the scroll. However, upon opening it, Po discovered that the scroll is just a golden reflective surface.",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THR the wide use of constructive ambiguity in International Law.",
         "theme": "Law",
         "infoslide": "Constructive ambiguity refers to the intentional use of vague language or terms in a statement or agreement to allow for multiple interpretations.",
-        "type": "THR"
+        "type": "Comparative"
     },
     {
         "motion": "THS the ghoster's law.",
         "theme": "Law",
         "infoslide": "The ghoster's law if passed would allow for divorce to be filed by one party without needing signatures from both partners. The only requirements for divorce would be that one party files for divorce and the other is made aware of the divorce filing.",
-        "type": "THS"
+        "type": "Value"
     },
     {
         "motion": "THP the life of an average monkey who lives in a resourceful jungle rather than the life of an average human being.",
         "theme": "Philosophy",
         "infoslide": "An average human being is not rich neither poor. The human being needs to work, maybe overtime from time to time. May get married or not. Still may need to worry about life or something else just like you & me.A monkey in a resourceful jungle doesn't need to worry about survival that much. The chances of dying from predators are limited. The monkey has a simple intelligence that equals to the intelligence of a 5-7 years old kid.",
-        "type": "THP"
+        "type": "Comparative"
     },
     {
         "motion": "THA Job, W continue to have faith",
         "theme": "Religion & Society",
         "infoslide": "Job is a pious man who has no proof of God's existence or goodness, but believes all the same. As a test, God allows all of Job's children to die, all of his wealth to be lost, and his physical health to diminish. God does not offer a justification for the test, and Job is given no indication of what will happen if he continues to believe in or renounce God.",
-        "type": "THA"
+        "type": "Actor"
     },
     {
         "motion": "THBT the Mexican government should adopt measures that enable one cartel to monopolise the drug market. (These measures can include but are not limited to: targeting enemy cartels; selective arrests; stopping military deployments to areas controlled by this cartel; and renouncing the headhunt on its current leaders.)",
         "theme": "Law",
         "infoslide": "",
-        "type": "THBT"
+        "type": "Value"
     },
     {
         "motion": "THA the parent, would choose the gift of intelligence rather than the gift of charisma",
         "theme": "Law",
         "infoslide": "You are pregnant with your first child. A fairy appears and offers to bless your unborn child with a gift of either incredible intelligence or incredible charisma. Once you have made your decision, it can not be reversed.",
-        "type": "THA"
-    }
+        "type": "Actor"
+    },
+    {
+        "motion": "THA a prominent climate scientist, would leak the findings.",
+        "theme": "Environment",
+        "infoslide": "You are a prominent climate scientist who has discovered that current models drastically underestimate global warming by several degrees.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA the newly elected president of a formerly repressive regime, would publicly pardon all political prisoners on day one.",
+        "theme": "Politics",
+        "infoslide": "You have just taken office after winning a democratic election in a country with a long history of political repression.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA a senior UN diplomat, would go public with the corruption allegations.",
+        "theme": "International Relations",
+        "infoslide": "Your team has uncovered large-scale corruption within a major humanitarian partner operating in a conflict zone.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA the leader of a newly independent nation, would reject international financial aid.",
+        "theme": "Post-Colonialism",
+        "infoslide": "You have just led your country to independence after decades of colonial rule. Donor nations are offering aid with various conditions attached.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA the Catholic Church, would support the ordination of women.",
+        "theme": "Religion",
+        "infoslide": "The Vatican faces growing internal dissent and public pressure over its ban on female priests.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA the global feminist movement, would embrace the abolition of gender categories.",
+        "theme": "Gender & Identity",
+        "infoslide": "A major global feminist coalition is determining whether to center its future work around dismantling the concept of gender entirely.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA the United States government, would implement a decade-long policy of total military non-intervention abroad.",
+        "theme": "Foreign Policy",
+        "infoslide": "",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA an LGBTQ+ rights movement, would abandon marriage equality as a central goal.",
+        "theme": "Gender & Sexuality",
+        "infoslide": "Marriage equality has been achieved in many jurisdictions, but other forms of discrimination persist. The movement is re-evaluating its priorities.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA a world-renowned anti-establishment author, would refuse all major studio film adaptations.",
+        "theme": "Art & Media",
+        "infoslide": "You are a globally recognized novelist whose work critiques capitalist systems. Major studios are offering large deals to adapt your work.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA the International Criminal Court, would issue an arrest warrant for the sitting president of a superpower.",
+        "theme": "International Law",
+        "infoslide": "Credible evidence has emerged of war crimes committed under the direct orders of a current world leader.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as a prominent Gen Z influencer, would reject all brand sponsorships and advocate for anti-consumerism.",
+        "theme": "Culture & Media",
+        "infoslide": "You have a platform of over 10 million followers. Brands routinely offer large sums for partnerships, but many of your followers are skeptical of influencer capitalism.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as a major labor union in a country undergoing automation, would prioritize negotiating reduced work hours over wage increases.",
+        "theme": "Labor & Technology",
+        "infoslide": "Automation has drastically reduced the need for human labor. Your union must choose a long-term bargaining strategy.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as the African Union, would establish a unified regional military force independent of UN command.",
+        "theme": "International Relations",
+        "infoslide": "You are debating how to increase African autonomy in peacekeeping and conflict intervention.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA a newly formed revolutionary government, would prioritize land redistribution over transitional justice.",
+        "theme": "Post-Conflict Reconstruction",
+        "infoslide": "The prior regime was deeply unequal and violent. The population is demanding both reparations and systemic change.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THA AI research collective, would open-source all advanced AI developments.",
+        "theme": "Technology & Ethics",
+        "infoslide": "Your lab is leading global innovation in general-purpose AI. There are growing concerns about monopolization and misuse.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House regrets the rise of the 'soft life' narrative among young people in the Global South.",
+        "theme": "Culture & Generational Shifts",
+        "infoslide": "The 'soft life' narrative encourages prioritizing rest, luxury, and ease over struggle and ambition, often in reaction to burnout and generational hardship.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House supports the narrative that 'healing is an individual responsibility'.",
+        "theme": "Mental Health & Culture",
+        "infoslide": "There is growing discourse encouraging individuals to take full accountability for their emotional and psychological healing, regardless of external trauma or systemic harm.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House regrets the normalization of 'delulu' as a valid coping strategy.",
+        "theme": "Online Culture",
+        "infoslide": "'Delulu' (short for delusional) is a popular term online, often used humorously to describe wishful thinking or fantasizing in the face of bleak realities.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House supports the narrative that 'the villain arc is a form of empowerment'.",
+        "theme": "Media & Identity",
+        "infoslide": "Online spaces increasingly embrace 'villain arcs' as narratives of self-prioritization, rejecting social expectations of kindness or sacrifice.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House opposes the narrative that 'your job is your identity'.",
+        "theme": "Work & Society",
+        "infoslide": "This narrative links a person's self-worth and social value directly to their career performance and productivity.",
+        "type": "Narrative"
+    }, 
+    {
+        "motion": "This House, as a popular dating app, would remove all features that allow users to filter by race or ethnicity.",
+        "theme": "Tech & Identity",
+        "infoslide": "",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as the global environmental movement, would prioritize radical degrowth over green innovation.",
+        "theme": "Environment",
+        "infoslide": "Radical degrowth calls for the decommisioning of existing non-green energy solutions and industrial establishments. Green innovation refers to the research, innovation and implementation of green solutions often alongside existing technologies",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as a top-tier university in a post-colonial state, would mandate courses on indigenous knowledge systems.",
+        "theme": "Education & Post-Colonialism",
+        "infoslide": "",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as a prominent African-American celebrity, would publicly denounce the American Dream as a myth.",
+        "theme": "Race & Society",
+        "infoslide": "Despite your success, you've witnessed systemic barriers persist for others in your community.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as a major streaming platform, would deplatform true crime content involving ongoing legal proceedings.",
+        "theme": "Media Ethics",
+        "infoslide": "Streaming services face backlash for sensationalizing real-time trauma and potentially influencing judicial outcomes.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House regrets the narrative that 'you are your own best investment'.",
+        "theme": "Capitalism & Selfhood",
+        "infoslide": "This idea, popular in hustle culture, suggests that personal resources (time, money, relationships) should be directed primarily toward self-optimization and career success.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House supports the narrative that 'black excellence should not require black exhaustion'.",
+        "theme": "Race & Achievement",
+        "infoslide": "This narrative critiques the high standards placed on marginalized groups to succeed despite systemic barriers, often at great personal cost.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House regrets the romanticization of 'main character energy'.",
+        "theme": "Social Media Culture",
+        "infoslide": "'Main character energy' is a popular narrative encouraging individuals to act as if their life is a movie where they are the protagonist.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House supports the narrative that 'community is more important than authenticity'.",
+        "theme": "Identity & Belonging",
+        "infoslide": "This tension often appears in activist or diasporic spaces, where being part of a group may require suppressing personal expression.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House regrets the resurgence of 'traditional femininity' as a trend among young women.",
+        "theme": "Gender & Cultural Shifts",
+        "infoslide": "Online spaces have seen a rise in the promotion of homemaking, modesty, and submissiveness as aspirational feminine ideals.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House prefers a world where memory can be selectively deleted over one where memory can be perfectly preserved.",
+        "theme": "Fictional Technology & Ethics",
+        "infoslide": "In this world, two fictional technologies exist: one allows permanent deletion of any chosen memory; the other allows flawless recall and preservation of all memories.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House would mandate the licensing and regulation of AI-generated romantic companionship services.",
+        "theme": "Technology & Society",
+        "infoslide": "New AI models have enabled users to form long-term romantic relationships with simulated partners. These services are gaining popularity and raising ethical concerns.",
+        "type": "Policy"
+    },
+    {
+        "motion": "This House supports the narrative that 'not everyone deserves a redemption arc'.",
+        "theme": "Media & Accountability",
+        "infoslide": "This narrative pushes back on the trend in fiction and media to portray all characters—no matter how harmful—as worthy of sympathy or a path to forgiveness.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House regrets the global prioritization of STEM over the arts in national education strategies.",
+        "theme": "Education Policy",
+        "infoslide": "Many governments have pushed for greater STEM enrollment through funding, prestige, and job prospects, often at the expense of the arts and humanities.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House, as a developing country facing severe brain drain, would ban private recruitment of citizens for work abroad.",
+        "theme": "Global Labor & Migration",
+        "infoslide": "Private recruiters offer lucrative jobs abroad to skilled professionals. Critics argue this undermines national development.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House believes that fictional portrayals of fascism should prioritize emotional horror over ideological critique.",
+        "theme": "Media & Ethics",
+        "infoslide": "In books and films, depictions of fascist regimes vary between emotionally horrifying and analytically detached. Some argue that analytical portrayals risk romanticizing or normalizing fascism.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House would allow individuals to voluntarily enter fully immersive virtual reality societies with no right of return.",
+        "theme": "Fictional Technology",
+        "infoslide": "Technological advances have made it possible to live entire lifetimes inside rich, simulated VR environments. Users can choose to disconnect from the real world forever.",
+        "type": "Policy"
+    },
+    {
+        "motion": "This House would rather live in a world where death is random and inevitable than in one where death is entirely optional.",
+        "theme": "Philosophy & Sci-Fi",
+        "infoslide": "In one world, mortality occurs as we know it. In the other, people can choose to live indefinitely with access to life-extending biotech.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House supports the narrative that 'protection is not the same as care'.",
+        "theme": "Power & Relationships",
+        "infoslide": "The narrative highlights how systems or individuals may offer safety or security without providing empathy, emotional labor, or agency.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House would establish a global moratorium on neural surveillance technologies.",
+        "theme": "Technology & Privacy",
+        "infoslide": "Emerging tech allows partial reading of brainwave patterns, enabling surveillance of emotions, intentions, or reactions. Governments and corporations are investing heavily.",
+        "type": "Policy"
+    },
+    {
+        "motion": "This House supports the narrative that love is a choice, not a feeling.",
+        "theme": "Romantic Relationships",
+        "infoslide": "",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House regrets the normalization of 'cutting toxic family members off'.",
+        "theme": "Family & Boundaries",
+        "infoslide": "This trend has become increasingly accepted in online mental health discourse as a path to personal healing and boundary-setting.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House prefers friendships built on loyalty over those built on honesty.",
+        "theme": "Friendship & Ethics",
+        "infoslide": "Friendships often balance loyalty (standing by someone no matter what) with honesty (telling hard truths).",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House, as a parent, would tell their child the full truth about the family's darkest secrets.",
+        "theme": "Family & Truth",
+        "infoslide": "You are the only one who knows the truth about events in your family's past. Your child is now old enough to understand.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House would ban apps that allow for covert tracking of romantic partners.",
+        "theme": "Romantic Relationships & Surveillance",
+        "infoslide": "Apps that enable real-time location sharing, phone activity monitoring, or silent observation have become common in romantic relationships, often framed as 'transparency'.",
+        "type": "Policy"
+    },
+    {
+        "motion": "This House supports the narrative that 'you don't owe your parents your success'.",
+        "theme": "Family & Obligation",
+        "infoslide": "In many cultures, children are expected to give back to their parents as a form of repayment for sacrifices made. This narrative challenges that belief.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House prefers a world where romantic love fades gradually to one where it ends suddenly.",
+        "theme": "Romance & Grief",
+        "infoslide": "In one world, relationships decline slowly over time, with love dissipating; in the other, love can disappear overnight, without warning.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House, as a therapist, would report a patient who is secretly planning to leave their family and start a new life under a false identity.",
+        "theme": "Ethics & Family",
+        "infoslide": "The patient is not planning any violence, but is emotionally abandoning their dependents. Reporting could break confidentiality rules.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House would legally allow adult siblings to enter cohabitation agreements equivalent to marriage.",
+        "theme": "Family & Legal Recognition",
+        "infoslide": "Such agreements would grant them shared property rights, health care access, tax benefits, etc., but without romantic or sexual involvement.",
+        "type": "Policy"
+    },
+    {
+        "motion": "This House regrets the narrative that 'you should be everything for your partner'.",
+        "theme": "Romantic Relationships & Expectations",
+        "infoslide": "This narrative promotes the idea that ideal partners should fulfill all emotional, intellectual, and social needs for one another.",
+        "type": "Narrative"
+    }      
  ]

@@ -7,6 +7,9 @@
     --primaryFont: 'Verdana';
     --secoFont: 'Candara';
 }
+body{
+    margin: 0;
+}
 button{
     color: var(--bgC);
     background-color: var(--pbrandC);
@@ -68,10 +71,10 @@ button:active{
     flex-direction: column;
     color: var(--bgC);
     margin: 1rem;
-    width:clamp(100px, 30vw, 200px);
-    min-height: 30vw;
+    width:clamp(100px, 33vw, 200px);
+    min-height: 100px;
     border-radius: 2vw;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
 }
 .whatWeDoCard p{
@@ -192,7 +195,8 @@ footer li{
     padding: 0;
 }
 footer h4,p{
-    margin: 0;
+    margin: 1px;
+    align-self: center;
 }
 footer .navLink, a{
     padding: 1vw;

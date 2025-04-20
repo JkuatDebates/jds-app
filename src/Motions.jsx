@@ -5,7 +5,7 @@ function Motions(){
     const [displayedMotions, setDisplayedMotions]=useState([]);
     const searchedMotionsRef=useRef([]);
     const searchRef=useRef(null);
-    const motionType=useRef(null);
+    const motionTypesRef=useRef(null);
     const motionsRef=useRef([]);
     const motionTypes=['','Value', 'Actor', 'Policy', 'Comparative','Narrative'];
 
@@ -18,27 +18,59 @@ function Motions(){
         })
         .then(arr=>arr.forEach(element => {
             motionsRef.current=[...motionsRef.current,element];
-            //console.log(motionsRef.current)
         }));
-    function searchMotion(){
-        //console.log(motionsRef.current.length);
-        searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
-        .includes(searchRef.current.value.toLowerCase()));
-        setDisplayedMotions(searchedMotionsRef.current);
-        searchRef.current.value='';
-        console.log(searchedMotionsRef.current);
-    }
-    function renderMotions(){
-        const rm=shuffle(motionsRef.current);
-        let n=10;
-        const dm=[];
-        while(n>0){
-            dm[n]=rm[n];
-            n--;
+
+    function renderMotions(b){
+        //b for button pressed
+        let v;
+        let filteredMotions=[];
+        let filteredSearch=[];
+        switch(b){
+            case 0: 
+                v=0;
+                break;
+            case 1:
+                (searchRef.current.value==='')? v=1: v=2;
+                if(motionTypesRef.current.value==='') v=4;
+                break;
+            case 2:
+                motionTypesRef.current.value!==''? v=2:v=3;
+                break;
         }
-        console.log(dm);
-        setDisplayedMotions(dm);       
+        
+
+        switch(v){
+            case 0://motion type:'', search:''
+                motionTypesRef.current.value='';
+                searchRef.current.value='';
+                setDisplayedMotions(shuffle(motionsRef.current));
+                break;
+            case 1://motion type:set, search:unset [type select]
+                filteredMotions=shuffle(motionsRef.current).filter((m)=>
+                    m.type===motionTypesRef.current.value);
+                setDisplayedMotions(filteredMotions);
+                break;
+            case 2://motion type:set, search:set
+                searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
+                    .includes(searchRef.current.value.toLowerCase()));
+                filteredSearch=searchedMotionsRef.current.filter((m)=>
+                        m.type===motionTypesRef.current.value);
+                setDisplayedMotions(filteredSearch);
+                break;
+            case 3://motion type:unset, search:set
+                searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
+                    .includes(searchRef.current.value.toLowerCase()));
+                setDisplayedMotions(searchedMotionsRef.current);
+                break;
+            case 4://motion type set to ''
+                searchRef.current.value===''? setDisplayedMotions(shuffle(motionsRef.current))
+                :setDisplayedMotions(motionsRef.current.filter((m)=>m.motion.toLowerCase()
+                        .includes(searchRef.current.value.toLowerCase())));
+                break; 
+            default:setDisplayedMotions([]);
+        }               
     }
+
     function shuffle(array){
         const shuffledArray=[...array];
         for(let i=shuffledArray.length-1;i>0;i--){
@@ -53,22 +85,22 @@ function Motions(){
         <div className="textBlock">
             <br />
             <p style={{display:'inline'}}>Select motion type: </p>
-            <select ref={motionType} placeholder='Motion Type'>
+            <select ref={motionTypesRef} onChange={()=>renderMotions(1)}>
                 {motionTypes.map((type, index)=>(
                     <option key={index}>{type}</option>
                     ))}
             </select> &nbsp;
             <input type="text" className="searchBar" placeholder="!Search motion"
             ref={searchRef}/>
-            <button style={{padding:'5px'}} onClick={searchMotion}><Search size={'1.5rem'}/></button>
+            <button style={{padding:'5px'}} onClick={()=>renderMotions(2)}><Search size={'1.5rem'}/></button>
         </div>
         <div>
-            <button onClick={renderMotions}>Refresh</button>
+            <button onClick={()=>renderMotions(0)}>Refresh</button>
             <div>
                 {displayedMotions.map((e,i)=>(
                     <div key={i} className="motionCard"> 
                     {e.infoslide!==''?<p>{e.infoslide}</p>:''}
-                    {e.motion}
+                    <br />{e.motion}
                     </div>
                 ))}
             </div>
