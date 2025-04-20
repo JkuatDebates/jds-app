@@ -5,7 +5,7 @@
     --accC: hsl(166, 100%, 20%);
     --padding: 2vw;
     --primaryFont: 'Verdana';
-    --secoFont: 'Arial';
+    --secoFont: 'Candara';
 }
 button{
     color: var(--bgC);
@@ -38,6 +38,13 @@ button:active{
     font-family: var(--primaryFont);
     margin: 1vw;
     border-radius: 1rem;
+}
+.motionCard p{
+    font-family: var(--secoFont);
+    border: 1px solid var(--accC);
+    border-radius: 1rem;
+    text-align: center;
+    padding: var(--padding);
 }
 .testimonials{
     margin: 2px;

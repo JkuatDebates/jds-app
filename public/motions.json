@@ -1,0 +1,736 @@
+[
+    {
+      "motion": "THW ban political donations from corporations and unions.",
+      "theme": "Politics",
+      "infoslide": "",
+      "type": "THW"
+    },
+    {
+      "motion": "THBT developing countries should prioritize climate resilience over economic growth.",
+      "theme": "Environment",
+      "infoslide": "",
+      "type": "THBT"
+    },
+    {
+      "motion": "THR the glorification of entrepreneurship in popular media.",
+      "theme": "Economics",
+      "infoslide": "",
+      "type": "THR"
+    },
+    {
+      "motion": "THW allow prisoners to volunteer for medical trials in exchange for reduced sentences.",
+      "theme": "Law",
+      "infoslide": "",
+      "type": "THW"
+    },
+    {
+      "motion": "THO the narrative that true love conquers all.",
+      "theme": "Culture",
+      "infoslide": "",
+      "type": "THO"
+    },
+    {
+      "motion": "THBT social media platforms should aggressively deplatform political extremists.",
+      "theme": "Media",
+      "infoslide": "",
+      "type": "THBT"
+    },
+    {
+      "motion": "THW give parents the right to genetically enhance their unborn children.",
+      "theme": "Ethics",
+      "infoslide": "",
+      "type": "THW"
+    },
+    {
+      "motion": "THBT the West should stop trying to promote liberal democracy abroad.",
+      "theme": "International Relations",
+      "infoslide": "",
+      "type": "THBT"
+    },
+    {
+      "motion": "TH prefers a world where people believe life has no inherent purpose.",
+      "theme": "Philosophy",
+      "infoslide": "",
+      "type": "TH"
+    },
+    {
+      "motion": "THBT universities should use lotteries instead of competitive admissions.",
+      "theme": "Education",
+      "infoslide": "",
+      "type": "THBT"
+    },
+    {
+        "motion": "THW eliminate all patents on life-saving medicines.",
+        "theme": "Health",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT there should be a universal basic income for all citizens.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW prioritize the protection of endangered species over human development.",
+        "theme": "Environment",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW require all news outlets to provide equal airtime to political candidates in the lead-up to elections.",
+        "theme": "Media",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW ban all forms of surveillance capitalism.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the United Nations should have the authority to enforce international law with military intervention.",
+        "theme": "International Relations",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW require all public officials to disclose their financial holdings.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THR the concept of 'self-care' as a capitalist marketing strategy.",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "THR"
+    },
+    {
+        "motion": "THW mandate that all public school curricula include comprehensive sex education.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the state should control the media to ensure it serves the public interest.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+
+    {
+        "motion": "THBT all countries should adopt a four-day workweek.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW allow students to grade their teachers.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT governments should use predictive policing technology.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW decriminalize the consumption of all drugs.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THR the idea of 'national identity' as a concept.",
+        "theme": "Philosophy",
+        "infoslide": "",
+        "type": "THR"
+    },
+    {
+        "motion": "THW make voting mandatory in all democratic elections.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW abolish all forms of intellectual property.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT individuals should have the right to sell their organs.",
+        "theme": "Ethics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW allow governments to monitor and censor private internet communications.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW mandate a global carbon tax to combat climate change.",
+        "theme": "Environment",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW grant citizenship to all refugees who have been in a country for more than five years.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW make environmental education mandatory in all schools worldwide.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT artificial intelligence should be granted rights as if it were a human.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW require all companies to provide employees with paid mental health days.",
+        "theme": "Health",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW ban the use of fossil fuels in transportation by 2050.",
+        "theme": "Environment",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT individuals should be able to vote on specific pieces of legislation via direct democracy.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW end the practice of awarding academic grades based on exams alone.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THR the idea of corporate social responsibility.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THR"
+    },
+    {
+        "motion": "THW ban all forms of capital punishment worldwide.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT democracy is incompatible with economic inequality.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW eliminate all private schools and make education fully public.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT states should recognize animal rights as equal to human rights.",
+        "theme": "Ethics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW legalize euthanasia for terminally ill patients.",
+        "theme": "Ethics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT governments should regulate all forms of artificial intelligence development.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW make climate change a central component of national security policies.",
+        "theme": "Environment",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT global trade agreements should prioritize labor rights over economic growth.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW grant universal healthcare to all individuals, regardless of immigration status.",
+        "theme": "Health",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW ban all forms of surveillance technology used by private corporations.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT nationalism is harmful to global cooperation and peace.",
+        "theme": "International Relations",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW provide universal access to broadband internet as a basic human right.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    
+    {
+        "motion": "THBT governments should prioritize the welfare of future generations over the needs of current citizens.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW end the use of standardized testing as a measure of academic achievement.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW implement a global wealth tax to combat inequality.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT developed countries should provide reparations to countries historically affected by colonialism.",
+        "theme": "International Relations",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW make the use of genetically modified organisms in food production illegal.",
+        "theme": "Ethics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW abolish private ownership of land.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW ban all forms of corporate lobbying in political systems.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT humanity should focus on colonizing space as a way to ensure the long-term survival of the species.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW allow children under 16 to vote in national elections.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW abolish the concept of private property in favor of communal ownership.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT art should be judged solely on its intrinsic aesthetic value, not political or social impact.",
+        "theme": "Art & Literature",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW nationalize all major social media platforms.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THR the use of moral arguments in climate activism.",
+        "theme": "Environment",
+        "infoslide": "",
+        "type": "THR"
+    },
+    {
+        "motion": "THBT the feminist movement should embrace radical separatism.",
+        "theme": "Gender & Sexuality",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW prohibit the use of AI-generated content in political campaigns.",
+        "theme": "Media",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT war crimes trials do more harm than good in post-conflict societies.",
+        "theme": "International Relations",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW ban the commercialization of religious symbols.",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THO the romanticization of burnout culture in high-achieving industries.",
+        "theme": "Health",
+        "infoslide": "",
+        "type": "THO"
+    },
+    {
+        "motion": "THW abolish constitutional monarchies.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the use of 'cancel culture' is a legitimate tool for social justice.",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW implement quotas for minority representation in national legislatures.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the criminal justice system should prioritize restorative justice over retributive justice.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THO the belief that 'everything happens for a reason.'",
+        "theme": "Philosophy",
+        "infoslide": "",
+        "type": "THO"
+    },
+    {
+        "motion": "THBT post-colonial states should reject Western models of development.",
+        "theme": "International Relations",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW allow citizens to opt out of government data collection programs without penalty.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the criminalization of hate speech does more harm than good.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW prohibit the development of autonomous weapons.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT modern activism is overly reliant on performative tactics.",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW make the right to internet access legally enforceable.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THO the portrayal of suffering as noble in religious and philosophical narratives.",
+        "theme": "Philosophy",
+        "infoslide": "",
+        "type": "THO"
+    },
+    {
+        "motion": "THBT space exploration should be prioritized over deep-sea exploration.",
+        "theme": "Science & Technology",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW ban for-profit prisons.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT emerging economies should adopt protectionist trade policies.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW not prosecute acts of civil disobedience motivated by moral conviction.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THR the use of historical trauma in branding national identity.",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "THR"
+    },
+    {
+        "motion": "THBT in times of crisis, scientific experts should override elected officials in policymaking.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW give workers a binding vote in corporate board decisions.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THW ban religious organizations from receiving government funding.",
+        "theme": "Religion & Society",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT satire should be protected even when it causes public outrage.",
+        "theme": "Media",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW abolish the statute of limitations on all crimes.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the environmental movement should embrace nuclear energy.",
+        "theme": "Environment",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW prohibit political donations from corporations and unions.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT sports leagues should impose salary caps on players.",
+        "theme": "Sports & Society",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THO the glorification of entrepreneurship in modern society.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THO"
+    },
+    {
+        "motion": "THW allow victims of crimes to determine sentencing within legal limits.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT environmental sabotage is a legitimate form of protest.",
+        "theme": "Environment",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THR the use of national history curricula to promote patriotism.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THR"
+    },
+    {
+        "motion": "THW provide tax exemptions only to non-profits that meet minimum social impact benchmarks.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the rise of influencer culture has undermined collective social action.",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THBT children should be shielded from all religious indoctrination until adulthood.",
+        "theme": "Religion & Society",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW ban all political advertising during election periods.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT the media should not report on the private lives of public figures.",
+        "theme": "Media",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW impose a universal basic income funded by taxing automation.",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT indigenous communities should have full sovereignty over their ancestral lands.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW ban the use of facial recognition technology in public spaces.",
+        "theme": "Technology",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT post-conflict societies should erase colonial-era monuments.",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW prohibit algorithmic sentencing in the criminal justice system.",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT student activism should focus more on coalition-building than confrontation.",
+        "theme": "Education",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THW allow cities to secede from their national governments under democratic conditions.",
+        "theme": "Politics",
+        "infoslide": "",
+        "type": "THW"
+    },
+    {
+        "motion": "THBT literature has a greater capacity than history to teach us about the past.",
+        "theme": "Art & Literature",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THBT parenting should require a license",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THO the taste for frivolity",
+        "theme": "Culture",
+        "infoslide": "The 'taste for frivolity' refers to a social norm that encourages people not to take anything 'too seriously'. This expectation manifests in a demand to be ironic and entertaining, a preference for nonchalance and effortless image curation, and a stigma against earnest and formal behavior.",
+        "type": "THO"
+    },
+    {
+        "motion": "THBT it would be unethical for you to press the button",
+        "theme": "Ethics",
+        "infoslide": "You are a 40-year-old, middle-income gay man, happily married to your partner for 10 years. Together, you co-own a two-bedroom apartment in Montreal's gay village and have a 5-year-old child. One day, a man contacts you with definitive proof that your husband has been cheating on you with him for over a year.Shortly after you initiate a divorce with your husband, you discover a button only you can see and press. If you press it, your current universe will be erased, and you will be transported to another universe where you had never divorced your husband and could never learn of his cheating. You would have no memory of pressing the button.",
+        "type": "THBT"
+    },
+    {
+        "motion": "THR the narrative that monetising sexuality is empowering for women",
+        "theme": "Gender & Sexuality",
+        "infoslide": "",
+        "type": "THR"
+    },
+    {
+        "motion": "THS Vegan Terrorism",
+        "theme": "Ethics",
+        "infoslide": "Vegan terrorism is any act (peaceful or radical) that involves protesting against or freeing animals being reared for the sake of consumption.",
+        "type": "THS"
+    },
+    {
+        "motion": "Assuming feasibility, THBT Po should sue Oogway",
+        "theme": "Law",
+        "infoslide": "The Dragon Scroll is a legendary scroll, written by Oogway (a legendary tortoise kung fu master) that supposedly contains the secret to 'limitless power'. Oogway declared that only the Dragon Warrior would be worthy enough to read the Dragon Scroll. Having passed tremendously difficult trials to qualify as the Dragon Warrior, Po eventually obtained the scroll. However, upon opening it, Po discovered that the scroll is just a golden reflective surface.",
+        "type": "THBT"
+    },
+    {
+        "motion": "THR the wide use of constructive ambiguity in International Law.",
+        "theme": "Law",
+        "infoslide": "Constructive ambiguity refers to the intentional use of vague language or terms in a statement or agreement to allow for multiple interpretations.",
+        "type": "THR"
+    },
+    {
+        "motion": "THS the ghoster's law.",
+        "theme": "Law",
+        "infoslide": "The ghoster's law if passed would allow for divorce to be filed by one party without needing signatures from both partners. The only requirements for divorce would be that one party files for divorce and the other is made aware of the divorce filing.",
+        "type": "THS"
+    },
+    {
+        "motion": "THP the life of an average monkey who lives in a resourceful jungle rather than the life of an average human being.",
+        "theme": "Philosophy",
+        "infoslide": "An average human being is not rich neither poor. The human being needs to work, maybe overtime from time to time. May get married or not. Still may need to worry about life or something else just like you & me.A monkey in a resourceful jungle doesn't need to worry about survival that much. The chances of dying from predators are limited. The monkey has a simple intelligence that equals to the intelligence of a 5-7 years old kid.",
+        "type": "THP"
+    },
+    {
+        "motion": "THA Job, W continue to have faith",
+        "theme": "Religion & Society",
+        "infoslide": "Job is a pious man who has no proof of God's existence or goodness, but believes all the same. As a test, God allows all of Job's children to die, all of his wealth to be lost, and his physical health to diminish. God does not offer a justification for the test, and Job is given no indication of what will happen if he continues to believe in or renounce God.",
+        "type": "THA"
+    },
+    {
+        "motion": "THBT the Mexican government should adopt measures that enable one cartel to monopolise the drug market. (These measures can include but are not limited to: targeting enemy cartels; selective arrests; stopping military deployments to areas controlled by this cartel; and renouncing the headhunt on its current leaders.)",
+        "theme": "Law",
+        "infoslide": "",
+        "type": "THBT"
+    },
+    {
+        "motion": "THA the parent, would choose the gift of intelligence rather than the gift of charisma",
+        "theme": "Law",
+        "infoslide": "You are pregnant with your first child. A fairy appears and offers to bless your unborn child with a gift of either incredible intelligence or incredible charisma. Once you have made your decision, it can not be reversed.",
+        "type": "THA"
+    }
+ ]
