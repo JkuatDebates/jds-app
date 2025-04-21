@@ -41,7 +41,6 @@ button:active{
     font-family: var(--primaryFont);
     border-radius: 1rem;
 }
-
 .profileCard{
     background-color: var(--pbrandC);
     margin: 5px;
@@ -230,4 +229,37 @@ footer .navLink, a{
         flex-direction: column;
     }
 }
-
+.timeline{
+    font-family: var(--primaryFont);
+}
+.upcomingEvents{
+    border-left: 10px solid var(--accC);
+    border-radius: 1rem;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    background-color: hsl(0, 0%, 90%);
+    padding: var(--padding);
+    margin-bottom: 1rem;
+}
+.upcomingEvents h3,h5, strong{
+    color: var(--accC);
+    margin:0;
+}
+.pastEvents{
+    border-left: 10px solid var(--pbrandC);
+    border-radius: 1rem;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+    background-color:  hsl(0, 0%, 90%);
+    padding: var(--padding);
+}
+.pastEvents h3, h5, strong{
+    color: var(--pbrandC);
+    margin:0;}
+.icon2{
+    fill: var(--accC);
+}
+.eventDetails p{
+    display: flex;
+    align-items: start;
+}
