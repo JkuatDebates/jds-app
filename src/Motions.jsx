@@ -13,10 +13,11 @@ function Motions(){
     fetch('/motions.json')
         .then(response=>{
             !response.ok? console.error('json not loaded')
-            :motionsRef.current=[];
+            :null;
             return response.json(); 
         })
         .then(arr=>{
+            motionsRef.current=[];
             arr.forEach(element => {
             motionsRef.current=[...motionsRef.current,element];
         });
@@ -73,6 +74,7 @@ function Motions(){
         }               
     }
     function ranMotion(){
+        //console.log(motionsRef.current.length);
         setRandomMotion(motionsRef.current[Math.floor(Math.random()*motionsRef.current.length-1)]);
     }
 

@@ -40,6 +40,7 @@ button:active{
     padding: var(--padding);
     font-family: var(--primaryFont);
     border-radius: 1rem;
+    margin-top: 5px;
 }
 .profileCard{
     background-color: var(--pbrandC);
@@ -284,7 +285,6 @@ footer .navLink, a{
     box-shadow: 2px 2px 2px var(--accC), -2px -2px 2px var(--accC);
     border-bottom: none;
     border-radius: 1rem;
-    scale: 1.04;
 }
 .eventDetails p{
     display: flex;
