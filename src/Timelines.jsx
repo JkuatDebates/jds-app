@@ -66,7 +66,7 @@ function EventCard({event}){
     return(
         <div className="eventCard">
             <div className="eventHeader" onClick={()=>setDetails(!details)}>
-                <h5><BsCalendar2DateFill size={20} className="icon2"/>{event.date} {event.title}</h5>
+                <h4><BsCalendar2DateFill size={20} className="icon2"/>{event.date} {event.title}</h4>
             </div>
             
             {details? <div className="eventDetails">

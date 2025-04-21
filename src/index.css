@@ -241,7 +241,7 @@ footer .navLink, a{
     padding: var(--padding);
     margin-bottom: 1rem;
 }
-.upcomingEvents h3,h5, strong{
+.upcomingEvents h3,h4, strong{
     color: var(--accC);
     margin:0;
 }
@@ -253,11 +253,15 @@ footer .navLink, a{
     background-color:  hsl(0, 0%, 90%);
     padding: var(--padding);
 }
-.pastEvents h3, h5, strong{
+.pastEvents h3, h4, strong{
     color: var(--pbrandC);
     margin:0;}
 .icon2{
     fill: var(--accC);
+}
+.eventCard{
+    padding: 1rem;
+    border-bottom: 2px solid white;
 }
 .eventDetails p{
     display: flex;
