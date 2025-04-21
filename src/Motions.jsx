@@ -106,7 +106,7 @@ function Motions(){
                     <option key={index}>{type}</option>
                     ))}
             </select> &nbsp;
-            <input type="text" className="searchBar" placeholder="!Search motion"
+            <input type="text" className="searchBar" placeholder="Search motion"
             ref={searchRef}/>
             <button style={{padding:'5px'}} onClick={()=>renderMotions(2)}><Search size={'1.5rem'}/></button>
         </div>

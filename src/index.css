@@ -55,6 +55,9 @@ button:active{
     width: 10rem;
     border-radius: 1rem;
 }
+.profileCard strong{
+    color: var(--accC);
+}
 .motionCard p{
     font-family: var(--secoFont);
     border: 1px solid var(--accC);
@@ -126,6 +129,14 @@ label{
     font-size: 1.2rem;
     background: none;
     display: none;
+}
+.sideBarDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .sidebarOpen{
     position: fixed;
@@ -207,9 +218,15 @@ footer li{
     background-color: var(--pbrandC);
     padding: 0;
 }
-footer h4,p{
+footer h4{
     margin: 1px;
     align-self: center;
+    color: var(--bgC);
+}
+footer p{
+    margin: 1px;
+    align-self: center;
+    color: var(--bgC);
 }
 footer .navLink, a{
     padding: 1vw;
@@ -263,7 +280,24 @@ footer .navLink, a{
     padding: 1rem;
     border-bottom: 2px solid white;
 }
+.eventCard:hover{
+    box-shadow: 2px 2px 2px var(--accC), -2px -2px 2px var(--accC);
+    border-bottom: none;
+    border-radius: 1rem;
+    scale: 1.04;
+}
 .eventDetails p{
     display: flex;
     align-items: start;
+    color: var(--pbrandC);
+}
+.navBar .activeLink{
+    border-bottom: 2px solid var(--accC);
+    font-weight: bold;
+    scale: 1.05;
+}
+.sidebarOpen .activeLink{
+    background-color: var(--accC); 
+    border-radius: 1rem;
+    font-weight: bold;   
 }

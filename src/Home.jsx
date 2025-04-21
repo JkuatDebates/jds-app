@@ -2,7 +2,8 @@ import {Swiper,SwiperSlide} from 'swiper/react';
 import {Autoplay,Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import {Lectern ,Mic ,Trophy, Gavel, MessageCircle,Quote, Instagram,} from 'lucide-react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import {upcomingEvents, EventCard} from './Timelines.jsx';
 
 function Home(){
     const slides=[
@@ -91,7 +92,9 @@ function Home(){
         </section>
         <section className='textBlock'>
             <h2>Check out upcoming events</h2>
-            <Link to='/timelines'><button className='buttonOnBrand'>Events</button></Link>
+            Most Imminent Event:
+            <EventCard event={upcomingEvents[upcomingEvents.length-1]}/>
+            <NavLink to='/timelines'><button className='buttonOnBrand'>Other Events</button></NavLink>
         </section>
     </>
         

@@ -6,7 +6,7 @@ import Timelines from './Timelines.jsx';
 import Tools from './Tools.jsx';
 import PageNotFound from './PageNotFound.jsx';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink,Link} from 'react-router-dom';
 import { FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {Mail} from 'lucide-react';
 
@@ -28,22 +28,23 @@ function App() {
           onClick={handleSidebar}>&#9776;</button>
         </div>
         <div className='navLinks'>
-        <Link to="/" className='navLink'>Home</Link>
-        <Link to="/profiles" className='navLink'>Profiles</Link>
-        <Link to="/motions" className='navLink'>Motions</Link>
-        <Link to="/articles" className='navLink'>Articles</Link>
-        <Link to="/tools" className='navLink'>Tools</Link>
-        <Link to="/timelines" className='navLink'>Timelines</Link>
+        <NavLink to="/" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Home</NavLink>
+        <NavLink to="/profiles" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Profiles</NavLink>
+        <NavLink to="/motions" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Motions</NavLink>
+        <NavLink to="/articles" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Articles</NavLink>
+        <NavLink to="/tools" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Tools</NavLink>
+        <NavLink to="/timelines" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Timelines</NavLink>
         </div>
       </nav>
       <div className={sideBarOPen? 'sidebarOpen':'sidebarClosed'}>
-        <Link onClick={handleSidebar} to="/" className='navLink'>Home</Link>
-        <Link onClick={handleSidebar} to="/profiles" className='navLink'>Profiles</Link>
-        <Link onClick={handleSidebar} to="/motions" className='navLink'>Motions</Link>
-        <Link onClick={handleSidebar} to="/articles" className='navLink'>Articles</Link>
-        <Link onClick={handleSidebar} to="/tools" className='navLink'>Tools</Link>
-        <Link onClick={handleSidebar} to="/timelines" className='navLink'>Timelines</Link>
+        <NavLink onClick={handleSidebar} to="/" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Home</NavLink>
+        <NavLink onClick={handleSidebar} to="/profiles" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Profiles</NavLink>
+        <NavLink onClick={handleSidebar} to="/motions" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Motions</NavLink>
+        <NavLink onClick={handleSidebar} to="/articles" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Articles</NavLink>
+        <NavLink onClick={handleSidebar} to="/tools" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Tools</NavLink>
+        <NavLink onClick={handleSidebar} to="/timelines" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Timelines</NavLink>
       </div>
+      {sideBarOPen &&<div className='sideBarDrop' onClick={handleSidebar}></div>}
       <main style={{minHeight:'50vh', margin:'8px'}}>
         <Routes>
         <Route path="/" element={<Home/>}/>
@@ -59,12 +60,12 @@ function App() {
       <div>
         <h4>Quick Links</h4>
         <ul>
-        <li><Link to="/" className='navLink'>Home</Link></li>
-        <li><Link to="/profiles" className='navLink'>Profiles</Link></li>
-        <li><Link to="/motions" className='navLink'>Motions</Link></li>
-        <li><Link to="/articles" className='navLink'>Articles</Link></li>
-        <li><Link to="/tools" className='navLink'>Tools</Link></li>
-        <li><Link to="/timelines" className='navLink'>Timelines</Link></li>          
+        <li><NavLink to="/" className='navLink'>Home</NavLink></li>
+        <li><NavLink to="/profiles" className='navLink'>Profiles</NavLink></li>
+        <li><NavLink to="/motions" className='navLink'>Motions</NavLink></li>
+        <li><NavLink to="/articles" className='navLink'>Articles</NavLink></li>
+        <li><NavLink to="/tools" className='navLink'>Tools</NavLink></li>
+        <li><NavLink to="/timelines" className='navLink'>Timelines</NavLink></li>          
         </ul>
       </div>
       <div style={{borderTop:'1px solid', display:'flex', justifyContent:'center',gap:'2vw'}}>
