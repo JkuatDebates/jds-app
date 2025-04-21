@@ -35,11 +35,25 @@ button:active{
 .buttonOnBrand:active{
    background-color:hsl(166, 100%, 40%);;
 }
-.profileCard, .textBlock, .motionCard,li,.testimonials, .testimonialsSection{
+.textBlock, .motionCard,li,.testimonials, .testimonialsSection{
     background-color: hsl(0, 0%, 90%);
     padding: var(--padding);
     font-family: var(--primaryFont);
-    margin: 1vw;
+    border-radius: 1rem;
+}
+
+.profileCard{
+    background-color: var(--pbrandC);
+    margin: 5px;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--bgC);
+    display: flex;
+    font-family: var(--primaryFont);
+    gap: 1rem;    
+}
+.profileCard img{
+    width: 10rem;
     border-radius: 1rem;
 }
 .motionCard p{
@@ -211,6 +225,9 @@ footer .navLink, a{
     }
     .hamburger{
         display: block;
+    }
+    .profileCard{
+        flex-direction: column;
     }
 }
 

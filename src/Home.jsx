@@ -93,9 +93,6 @@ function Home(){
             <h2>Check out upcoming events</h2>
             <Link to='/timelines'><button className='buttonOnBrand'>Events</button></Link>
         </section>
-        <footer>
-
-        </footer>
     </>
         
     )

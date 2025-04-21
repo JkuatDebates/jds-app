@@ -20,9 +20,8 @@ function Tools(){
 
     return(
         <div>
-            <div >
-                <span>Pick Tool</span><br />
-                
+            <div className='textBlock'>
+                <h2>Pick tool</h2>
                 <label htmlFor="Teamer">
                     <input type="radio" name="tools" id="Teamer" 
                     onChange={()=>toolSelect('DT')}/>Teamer</label><br />

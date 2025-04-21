@@ -1,5 +1,5 @@
 import { Search } from "lucide-react"
-import { useRef, useState } from "react"
+import { useRef, useState} from "react"
 
 function Motions(){
     const [displayedMotions, setDisplayedMotions]=useState([]);
@@ -7,18 +7,20 @@ function Motions(){
     const searchRef=useRef(null);
     const motionTypesRef=useRef(null);
     const motionsRef=useRef([]);
+    const [randomMotion, setRandomMotion]=useState('');
     const motionTypes=['','Value', 'Actor', 'Policy', 'Comparative','Narrative'];
 
     fetch('/motions.json')
         .then(response=>{
             !response.ok? console.error('json not loaded')
-            :console.log('json loaded');
-            motionsRef.current=[];
+            :motionsRef.current=[];
             return response.json(); 
         })
-        .then(arr=>arr.forEach(element => {
+        .then(arr=>{
+            arr.forEach(element => {
             motionsRef.current=[...motionsRef.current,element];
-        }));
+        });
+    });
 
     function renderMotions(b){
         //b for button pressed
@@ -43,7 +45,7 @@ function Motions(){
             case 0://motion type:'', search:''
                 motionTypesRef.current.value='';
                 searchRef.current.value='';
-                setDisplayedMotions(shuffle(motionsRef.current));
+                setDisplayedMotions([]);
                 break;
             case 1://motion type:set, search:unset [type select]
                 filteredMotions=shuffle(motionsRef.current).filter((m)=>
@@ -63,12 +65,15 @@ function Motions(){
                 setDisplayedMotions(searchedMotionsRef.current);
                 break;
             case 4://motion type set to ''
-                searchRef.current.value===''? setDisplayedMotions(shuffle(motionsRef.current))
+                searchRef.current.value===''? setDisplayedMotions([])
                 :setDisplayedMotions(motionsRef.current.filter((m)=>m.motion.toLowerCase()
                         .includes(searchRef.current.value.toLowerCase())));
                 break; 
             default:setDisplayedMotions([]);
         }               
+    }
+    function ranMotion(){
+        setRandomMotion(motionsRef.current[Math.floor(Math.random()*motionsRef.current.length-1)]);
     }
 
     function shuffle(array){
@@ -83,7 +88,18 @@ function Motions(){
     return(
         <>
         <div className="textBlock">
+            <h3 style={{display:'inline'}}>Random Motion</h3>
+            <button onClick={ranMotion}>Generate</button>
+            <div className="motionCard">
+                {(randomMotion.infoslide!==''&& 
+                    randomMotion.infoslide!==undefined)?
+                    <p>{randomMotion.infoslide}</p>:''}
+                {randomMotion.motion}
+            </div>
+        </div>
+        <div className="textBlock">
             <br />
+            <h3>Browse Motions</h3>
             <p style={{display:'inline'}}>Select motion type: </p>
             <select ref={motionTypesRef} onChange={()=>renderMotions(1)}>
                 {motionTypes.map((type, index)=>(

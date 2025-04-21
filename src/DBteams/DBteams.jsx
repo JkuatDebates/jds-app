@@ -203,7 +203,7 @@ function DBteams(){
     }
     
     return(
-        <div className={styles.container}>
+        <div className='textBlock'>
             <h2>Debate Team Picker</h2>
             <label htmlFor="format">
                 Choose format
