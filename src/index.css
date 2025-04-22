@@ -53,7 +53,7 @@ button:active{
     gap: 1rem;    
 }
 .profileCard img{
-    width: 10rem;
+    width: clamp(100px, 50vw, 400px);
     border-radius: 1rem;
 }
 .profileCard strong{
