@@ -20,7 +20,7 @@ function Profiles(){
             photo:'/anita.jpg',
             catchPhrase:'',
             alias:'Sofia The First',
-            rumor:'',
+            rumor:"She breaks hearts as often as she does debate rounds",
             passion:'Crotcheting',
             trainer:'',
             isVisible:true
@@ -44,7 +44,7 @@ function Profiles(){
             accolades:"Ill'ouwa 2 Novice Champion; KUDC PS 4th Best Judge",
             photo:'/jeremy.jpg',
             catchPhrase:'The absence of evidence, ...',
-            rumor:'',
+            rumor:'Strangers assume he loves herbs😂',
             passion:"Knowledge (He's legit a walking encyclopedia)",
             trainer:'',
             isVisible:true
@@ -183,12 +183,12 @@ function Profiles(){
         },
         {name:'Nina Wairimu',
             yearsActive:'2022-present',
-            clubRoles:'Debator, chaos creator',
+            clubRoles:'Debater, chaos creator',
             accolades:"Uniconnect 2.0 champion, first Runner's up Athena women's tournament, EAUDC semi-finalist, KUDC 1.0 semi-finalist, 3rd best Public Speaking judge KUDC 2.0, Mashujaa ix novice semi-finalist, 4th best novice speaker Mashujaa ix (the list goes on..)",
             photo:'/nina.jpg',
             catchPhrase:'',
             alias:'',
-            rumor:'',
+            rumor:'She once almost won a tournament tipsy😂',
             passion:'Discourse',
             trainer:'Various under The Debate Circle',
             isVisible:true
