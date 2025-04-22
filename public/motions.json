@@ -1032,5 +1032,227 @@
         "theme": "Romantic Relationships & Expectations",
         "infoslide": "This narrative promotes the idea that ideal partners should fulfill all emotional, intellectual, and social needs for one another.",
         "type": "Narrative"
-    }      
+    },
+    {
+        "motion": "THO the increasing prominence of people adopting the no-contact rule.",
+        "theme": "Romantic Relationships & Expectations",
+        "infoslide": "The no-contact rule recommends that following the end of a relationship, one must suspend all contact with the ex-partner. This means; deleting their contact details, unfollowing their social media profiles and minimizing as far as possible, all possible in-person interactions.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "Assuming the feasibility of transportation of humans to the new world, THW only transport those who have been adhering to eco-friendly practices/guidelines to the new world.",
+        "theme": "Fictional Technology",
+        "infoslide": "The year is 5067. The world's population has increased by 60% compared to 2020 data. Earth is on the brink of becoming uninhabitable due to climate degradation and overpopulation. A world government has discovered a habitable planet in a distant galaxy.",
+        "type": "Policy"
+    },
+    {
+        "motion": "In response to systemic oppression in the status quo,TH Prefers Aaron Busnell's approach over Luigi Mangione's approach.",
+        "theme": "Activism",
+        "infoslide": "Aaron Bushnell, a former member of the United States Air Force, tragically died in 2024 after self-immolating (i.e., himself on fire) outside the Israeli Embassy in Washington, D.C. This act was a protest against the United States' support for Israel. Luigi Mangione is accused of shooting and killing Brian Thompson, the CEO of UnitedHealthcare, in 2024. He allegedly carried out the attack as a protest against the health insurance industry.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "TH, as the AU would, aggressively intervene in coup situations in Africa.",
+        "theme": "Political Stability",
+        "infoslide": "Since 2020, Africa has witnessed a resurgence of military coups and unconstitutional changes in government. The African Union (AU) has faced criticism for its 'passive' response to these events, primarily involving diplomatic calls for a return to constitutional or democratic rule and suspending the membership of affected nations. In contrast, ECOWAS, the West African regional body, has been praised for its more aggressive approach to addressing coups in the region, including imposing sanctions and even attempting direct military intervention.",
+        "type": "Actor"
+    },
+    {
+        "motion": "Assuming that bodily features (face, height, skin color, body shape) still differ from individual to individual, This House Prefers a world where everyone has the same self-presentation (same clothes, same hairstyle, same accessories)",
+        "theme": "Culture",
+        "infoslide": "",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THR the popularisation of the Japa trend.",
+        "theme": "Social Media Culture",
+        "infoslide": "The term '*Japa*', originating from Yoruba and meaning '_to run swiftly_' or '_to escape_', refers to the act of emigrating, often to Western countries, in search of better opportunities or to escape economic and political hardships. Popularised in 2018 by Nigerian artist Naira Marley, the term has since become synonymous with the widespread emigration of West Africans dissatisfied with the socio-economic conditions in their countries. This trend has been further amplified by social media, where posts frequently document and glorify the emigration process as a pathway to a better life.",
+        "type": "Narrative"
+    },
+    {
+        "motion": "THR the condemnation of religions towards the hedonistic tendencies of humans (e.g., lust, materialism, seeking pleasure, avoiding suffering, etc.).",
+        "theme": "Religion & Society",
+        "infoslide": "",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THP a world in which there is no belief in an inherent value to life.",
+        "theme": "Ethics",
+        "infoslide": "",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THR the glorification of the Golden Age of Globalisation as a goal for states to strive for.",
+        "theme": "Tech & Identity",
+        "infoslide": "The “_Golden Age of Globalisation_” refers to the late 20th and early 21st centuries, a period of unprecedented global economic growth and interconnectedness. This era was characterised by trade liberalisation, rapid technological advancements, the rise of multinational corporations and global supply chains, and increased cross-border movement of people, goods, and ideas. It is often seen as a time of optimism for global progress.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THBT Ammit's justice system is justified.",
+        "theme": "Law",
+        "infoslide": "Ammit is a powerful god who has immense power and her justice system is based on preemptive judgment, where individuals are punished for future crimes they are predicted to commit, rather than judged by their past actions. Ammit's system focuses on foreseeing potential wrongdoings and punishing individuals based on their future behavior.",
+        "type": "Value"
+    },
+    {
+        "motion": "THA the Galactic Council , would ban time travel",
+        "theme": "Technology & Ethics",
+        "infoslide": "In the year 4057, humanity and other intelligent species have formed a Galactic Council to maintain peace across the universe. Time travel has recently been discovered, allowing individuals to travel to any point in history. However, some have used this technology to alter key events, destabilizing timelines and causing unforeseen consequences.",
+        "type": "Actor"
+    },
+    {
+        "motion": "In post conflict societies ,This House Would actively suppress information and interpretations that portray any past dictator or tyrannical regime in a sympathetic light",
+        "theme": "Media Ethics",
+        "infoslide": "",
+        "type": "Policy"
+    },
+    {
+        "motion": "THS the narrative that cheating is justified",
+        "theme": "Romantic Relationships",
+        "infoslide": "",
+        "type": "Narrative"
+    },
+    {
+        "motion": "This House Believes That Jesus' Teachings should be Interpreted as Philosophical Principles Rather Than Religious Doctrine.",
+        "theme": "Philosophy & Religion",
+        "infoslide": "",
+        "type": "Value"
+    },
+    {
+        "motion": "THW Regulate Media Coverage On Violent Crime and Punishment.",
+        "theme": "Media & Ethics",
+        "infoslide": "",
+        "type": "Policy"
+    },
+    {
+        "motion": "THBT College athletes should be paid for their participation in sports.",
+        "theme": "Sports",
+        "infoslide": "",
+        "type": "Value"
+    },
+    {
+        "motion": "THP Model X over Model Y.",
+        "theme": "Inclusion culture",
+        "infoslide": "Model X: All schools are ranked according to the number of students that they are able to train and send each year, to National/International/Worlds level Competitions in Sports, Extra-curriculars and Academics only. MODEL Y : All schools are ranked according the diversity and expanse of the choice pool and the facilities that they provide to students to choose from, amongst Sports, Extra-curriculars, Academics only.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House Believes That Scavenger Gangs in Post-Apocalyptic Settings Have Justifiable Ethics.",
+        "theme": "Ethics",
+        "infoslide": "Scavenger Gangs are groups of individuals who band together for survival, often resorting to scavenging (searching for and taking whatever resources they can find) as a primary means of obtaining food, water, shelter, and other necessities.These gangs often emerge in the absence of formal societal structures and can vary widely in their methods and morals, from cooperative and protective to violent and ruthless",
+        "type": "Value"
+    },
+    {
+        "motion": "This House Believes That prophecies do more harm than good in Fantasy Worlds.",
+        "theme": "Religion",
+        "infoslide": "FANTASY WORLDS : Worlds of characters from the movies, plays, novels, scripts or any other genre in art, that are imaginary.",
+        "type": "Value"
+    },
+    {
+        "motion": "This House, as Dave, would choose to walk away",
+        "theme": "Ethics",
+        "infoslide": "Dave, is a middle aged college professor of the local community college, who lives in the scenic town of Tolkeinland. Tolkeinland being comprised of a smaller populace, ensures the community stays much interconnected. Recently, there has been an increase in violent crimes in the community due to Ralfo, a new drug lord in the neighboring city. One evening while travelling back to his home, Dave finds Ralfo's car wrecked by the road with him crawling by the roadside. The path is always empty at this time. He is the only one who could help.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This House, as Stein, whould choose to go.",
+        "theme": "Family & Obligation",
+        "infoslide": "Stein is a college freshman at his local community college. He is a native american and a first generation college goer from his family. His father has a bad temperament which makes life harder for his mother and only sister. Their family income often does not cover Stein's college tuition. He has to work at the local bar where the salary is meagre. Stein has received an email that he's been shortlisted for his desired program at his dream college on the other side of the country, with full scholarship as a transfer student. Him going away, however, will strain his family's non-existent income and jeopardise the life of his mother and sister.",
+        "type": "Actor"
+    },
+    {
+        "motion": "This house regrets the ruling of the judges",
+        "theme": "Religion & Society",
+        "infoslide": "Two Swiss-Turkish parents from Lausanne, Switzerland of Muslim faith caused a provocative international stir 7 years ago. They have two young daughters who attend a public school in Basel. This school conducts swimming lessons for all the students, but mandates that girls and boys swim together and compete with each other in these lessons. The parents refused to send their daughters to mixed swimming lessons on the grounds “that their religious beliefs prohibited them from allowing their children to take part.” After failing at domestic level, the parents filed a case against the European Court of Human Rights (ECHR). A panel of seven judges found in favour of Switzerland stating that goals of integration between students of different sexes that schools pursue override goals of religious autonomy that parents want to pursue.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "This House as Ross, will not request his teacher for any considerations",
+        "theme": "Education",
+        "infoslide": "Ross is a seventeen year old teenager who lives in downtown New York. His family has been going through tumultuous times due to the chronic illness of his mother who requires much tending to from Ross. His father is overworked in the two jobs he handles as a labourer. Ross has recently been largely underperforming in his class and his teacher has been misunderstanding the cause of his underperformance. His teacher has recently given him the ultimatum that should he get any less than full marks in the final examinations, he will be failed and detained. His only hope now is to speak to his teacher personally to explain to her his family conditions. But should he share such details and should they reach his classmates, he's sure to face humiliation, catcalling and ridicule. His teacher is known to discuss such delicate matters publicly with other fellow teachers and students. His teacher isn't restrictive of bullying in their class. Their school is very lax on the issue of bullying.",
+        "type": "Actor"
+    },
+    {
+        "motion": "THBT developing countries should privatize their State-Owned Enterprises (such as airlines, railway utility companies, etc)",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "Value"
+    },
+    {
+        "motion": "THP that AGI be based on virtue ethics and not utilitarian framework",
+        "theme": "AI & Ethics",
+        "infoslide": "Virtue ethics is a way of thinking about right and wrong that focuses on good character. It emphasizes acting in ways that reflects positive traits like honesty, courage, and kindness.Utilitarian frameworks think about right and wrong by maximizing outcomes, usually defined as the greatest overall well-being of utility for affected parties.An AGI or artificial general intelligence refers to a type of artificial intelligence that has the ability to understand, learn, and apply knowledge across a ride range of tasks at a level equal to or beyond that of a human without specifically being programmed to. Assume Artificial General Intelligence exists",
+        "type": "Comparative"
+    },
+    {
+        "motion": "TH would impose a single global corporate tax rate",
+        "theme": "Economics",
+        "infoslide": "Global corporate tax rate is a set single tax rate that all countries apply to international companies in their jurisdiction.",
+        "type": "Policy"
+    },
+    {
+        "motion": "THP a world where all musicians are publicly offered as opposed to having record labels.",
+        "theme": "Art & Economics",
+        "infoslide": "Recently, there has been a rise in websites such as SliceThePie.com that allow individuals to invest in musicians or bands, as an alternative to record labels. Under this arrangement, an artist would allow investors to buy shares of the band, giving the band money to record and promote their music in exchange for the investor receiving a portion of the profits.",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THBT that human nature is incompatible with communism",
+        "theme": "Economics",
+        "infoslide": "",
+        "type": "Value"
+    },
+    {
+        "motion": "THR Feminism Lite",
+        "theme": "Feminism",
+        "infoslide": "",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THBT religious preachers should abandon the notion of 'God's Plan' when preaching to underprivileged communities",
+        "theme": "Religion & Society",
+        "infoslide": "",
+        "type": "Value"
+    },
+    {
+        "motion": "THP a world where Mitt Romney won the 2012 US Presidential Election",
+        "theme": "Politics",
+        "infoslide": "Mitt Romney was the Republican Candidate in the 2012 US Presidential Election. He lost the election to Barack Obama who was the incumbent",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THR the overwhelming narrative of good triumphing over evil in children’s entertainment",
+        "theme": "Media",
+        "infoslide": "",
+        "type": "Comparative"
+    },
+    {
+        "motion": "THBT governments of developing nations with high national or sovereign debts should aggressively pursue haircuts as opposed to other debt options(including but not limited to defaulting, debt restructuring etc)",
+        "theme": "Economics",
+        "infoslide": "In finance, a haircut refers to the reduction applied to the value of an asset for the purpose of calculating the capital requirement, margin, and collateral level.In the context of sovereign debt, it refers to the process of reducing the face value of outstanding debt securities, which in turn reduces the amount of principal that bondholders are entitled to receive.",
+        "type": "Value"
+    },
+    {
+        "motion": "This House opposes 'school choice' in liberal democracies.",
+        "theme": "Education",
+        "infoslide": "'School choice' is the ideology that parents should have significant access to alternatives to public education for their children, such as private, selective or religious schools. Consequently, proponents of 'school choice' support various schemes to support parents to send their children to non-government schools, such as government funding for private schools, tax concessions for providing additional scholarships, and a relaxation of school district laws.",
+        "type": "Value"
+    },
+    {
+        "motion": "THW mandate that no institutional investor can invest more than 5% of its portfolio in any one industry",
+        "theme": "Economics",
+        "infoslide": "Institutional investors are specific investment banks, investment firms who manage multiple large funds and venture capital firms who invest in a series of different projects.",
+        "type": "Policy"
+    },
+    {
+        "motion": "This House believes that governments should provide people living with disabilities with a direct stipend rather than state-owned disability services",
+        "theme": "Inclusion culture",
+        "infoslide": "",
+        "type": "Value"
+    },
+    {
+        "motion": "THP a world where the message of immortality was delivered",
+        "theme": "Life & Death",
+        "infoslide": "The Igbo folklore tells the story of Chukwu(God) who sent a dog to deliver the secret of immortality to man, along the way the dog got distracted and never delivered the secret. So Chukwu once again sent the sheep but the sheep, too stupid, also failed to deliver. In time the first man died and was sprinkled with ash and therein, man lost his claim to immortality.",
+        "type": "Comparative"
+    }
  ]
