@@ -65,7 +65,8 @@ function Home(){
                 It's a space to hone your speaking skills while sharpening your mind
                 through intellectual debates, discussions and stimulating public speaking
                 prompts. More than anything, we are a community of 
-                open-minded fellows always willing to hear new perspectives out. Check us out.
+                open-minded fellows always willing to hear new perspectives out. We meet every Monday and Friday 
+                (when school is in session) at JKAC 02(next to IEET) from 6pm. Check us out.
             </p>
         </section>
         <section className='textBlock'>

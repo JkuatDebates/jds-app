@@ -163,10 +163,10 @@ function Profiles(){
             accolades:"Convenor ILO’UWA Debates II, CA Africa Child Debators Inaugural tournament,UNICONNECT Final Champions,KUDC 2.0 BEST JUDGE (PS),UNICONNECT Best Male Speaker, INDABA II BEST JUDGE (DEBATE),Athena Women’s Festival '24 - Finalist & 1st Runner Up,Kampala Opens Quarterfinalist, KUDC 1.0 Quarterfinalist, Mashujaa IX 2nd Best Novice Speaker",
             photo:'/ted.jpg',
             catchPhrase:'"Have you met Ted?"',
-            alias:" Teddy 'THE' BEAR🐻‍❄",
+            alias:" Teddy 'THE' BEAR 🐻‍❄",
             rumor:'loves like Ted Mosby (mostly true😅😅😅) so the character development mileage on this nigga is real',
             passion:'Climate and Social Justice',
-            trainer:'Associate Trainer at JUJA PREP SENIOR SCHOOL',
+            trainer:'Associate Trainer at JUJA PRE SENIOR SCHOOL',
             isVisible:true
         },
         {name:'George Kiritu',
