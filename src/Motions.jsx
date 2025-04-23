@@ -75,7 +75,10 @@ function Motions(){
     }
     function ranMotion(){
         //console.log(motionsRef.current.length);
-        setRandomMotion(motionsRef.current[Math.floor(Math.random()*motionsRef.current.length-1)]);
+        let ran=motionsRef.current[Math.floor(Math.random()*(motionsRef.current.length-1))];
+        ran.infoslide!==undefined?
+        setRandomMotion(ran): console.log(ran);
+
     }
 
     function shuffle(array){
