@@ -7,6 +7,7 @@ const events=[
     {
         title: 'Mashujaa Opens XIV',
         venue: 'Strathmore University',
+        venueLink:'',
         date: '2025-04-13',
         time:'8 AM EAT',
         cost:'Ksh.200 per speaker',
@@ -17,6 +18,7 @@ const events=[
     {
         title: "Sadaqah Li Qaadiya 2025: Debate for Hope's Children's Home",
         venue: 'DAK Discord(online)',
+        venueLink:'https://discord.com/invite/YRkBRpa4',
         time:'8 AM EAT',
         cost: "Ksh. 100 (100% donated to children's Home)",
         date:'2025-05-01',
@@ -27,6 +29,7 @@ const events=[
     {
         title: "Illouwa III",
         venue: 'TBA',
+        venueLink:'',
         cost: "TBA",
         time:'8 AM EAT',
         date:'2025-10-04',
@@ -71,7 +74,7 @@ export function EventCard({event}){
             
             {details? <div className="eventDetails">
                 <p><strong>Desc:</strong>{event.description}</p>
-                <p><FaLocationDot size={20} className="icon2"/>{event.venue}</p>
+                <p><FaLocationDot size={20} className="icon2"/>{event.venueLink!==''?<a href={event.venueLink}>{event.venue}</a>:event.venue}</p>
                 <p><FaClock size={20} className="icon2"/>{event.time}</p>
                 <p><FaMoneyBillWave size={20} className="icon2"/>{event.cost}</p>
                 {event.paymentDetails!==''?<p><FaCreditCard size={20} className="icon2"/>{event.paymentDetails}</p>:''}

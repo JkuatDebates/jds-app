@@ -290,6 +290,9 @@ footer .navLink, a{
     display: flex;
     align-items: start;
     color: var(--pbrandC);
+}.eventDetails a{
+    text-decoration: none;
+    color: var(--accC);
 }
 .navBar .activeLink{
     border-bottom: 2px solid var(--accC);
