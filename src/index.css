@@ -176,7 +176,7 @@ label{
 .carousel{
     position: relative;
     width: 100%;
-    height: clamp(50vw, 45vh, 100vw);
+    height: clamp(60vw, 45vh, 100vw);
     overflow: hidden;
     margin-top: 1rem;
     border-radius: 1rem;
@@ -188,7 +188,7 @@ label{
 }
 .slide img{
     width: 100%;
-    height: clamp(50vw, 45vh, 100vw);
+    height: clamp(60vw, 45vh, 100vw);
     object-fit: cover;
 }
 .caption{
