@@ -68,15 +68,15 @@ function App() {
         <li><NavLink to="/timelines" className='navLink'>Timelines</NavLink></li>          
         </ul>
       </div>
-      <div style={{borderTop:'1px solid', display:'flex', justifyContent:'center',gap:'2vw'}}>
+      <div style={{borderTop:'1px solid', display:'flex', justifyContent:'center',gap:'3vw'}}>
         <h4>Reach us:</h4>
         <a href="https://www.instagram.com/jkuat_debate_society_?igsh=MWQ0eHI3N2FtOHhleg=="
         target='_blank'>
-          <FaInstagram size={'5vw'}/></a>
+          <FaInstagram size={'5vw'} className='instagram icon'/></a>
           <a href="mailto: jkuatdebates@gmail.com" target='_blank'>
-          <Mail size={'5vw'}/></a>
+          <Mail size={'5vw'} className='gmail icon'/></a>
           <a href="https://wa.me/254705984120?text=Hi%20there!%20I%27d%20like%20to%20chat%20about%20JDS." target='_blank'>
-          <FaWhatsapp size={'5vw'}/></a>
+          <FaWhatsapp size={'5vw'} className='whatsapp icon'/></a>
       </div>
       <div style={{borderTop:'1px solid', display:'flex',flexDirection:'column', alignContent:'center'}}>
         <p style={{fontSize:'3vw', marginTop:'2vw'}}>&copy;JKUAT Debate Society {(new Date).getFullYear()}</p>

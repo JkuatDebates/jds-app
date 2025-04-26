@@ -2,7 +2,7 @@ import {Swiper,SwiperSlide} from 'swiper/react';
 import {Autoplay,Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import {Lectern ,Mic ,Trophy, Gavel, MessageCircle,Quote, Instagram,} from 'lucide-react';
-import { NavLink } from "react-router-dom";
+import { NavLink,Link} from "react-router-dom";
 import {upcomingEvents, EventCard} from './Timelines.jsx';
 
 function Home(){
@@ -29,8 +29,8 @@ function Home(){
         title:'Discussions', desc:'Get a chance to air your thoughts and learn in free round table discussions about anthing and everything'},
     ];
     const testimonials=[
-        {author:'Keneth (Kenkei) Mwaniki', test:'I wish I had found the club sooner. Such an accepting group of people. Never a dull moment around them'},
-        {author:'Nina A. Wairimu', test:'A group of nerds who are, like, mko na a bit of separation anxiety. A bit of attachment issues but we accept. We love each other the way that we are'}
+        {author:'Keneth Mwaniki', id:'ken', test:'I wish I had found the club sooner. Such an accepting group of people. Never a dull moment around them'},
+        {author:'Nina Wairimu',id:'nina', test:'A group of nerds who are, like, mko na a bit of separation anxiety. A bit of attachment issues but we accept. We love each other the way that we are'}
     ];
     
     return(
@@ -83,13 +83,29 @@ function Home(){
         </section>
         <section>
             <h2>What members say</h2>
-            {testimonials.map((t,i)=>(
-                <div key={i} className='testimonials'>
-                    <Quote size={'1.5rem'} display={'inline'}/>
-                    <h4>{t.test}</h4>
-                    <p style={{textAlign:'right'}}>{t.author}</p>
-                </div>
-            ))}
+            <Swiper
+                modules={[Autoplay, Navigation]}
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }}
+                navigation={true}
+                loop={true}
+                className="mySwiper">{testimonials.map((t,i)=>(
+                    <SwiperSlide key={i}>
+                        <div className="testimonials">
+                            <Quote size={'1.5rem'} display={'inline'} className='quoteMark'/>
+                            <h4>{t.test}</h4>
+                            <div className='lineAuthor'>
+                                <div className='line'></div>
+                                <p><Link to={`/profiles#${t.id}`} className='dLink'>{t.author}</Link></p>                            
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </section>
         <section className='textBlock'>
             <h2>Check out upcoming events</h2>

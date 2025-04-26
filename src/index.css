@@ -40,7 +40,7 @@ button:active{
     padding: var(--padding);
     font-family: var(--primaryFont);
     border-radius: 1rem;
-    margin-top: 5px;
+    margin-top: 1rem;
 }
 .profileCard{
     background-color: var(--pbrandC);
@@ -70,8 +70,39 @@ button:active{
     margin: 2px;
     box-shadow: -2px -2px 2px var(--accC);
 }
+.lineAuthor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.line{
+    height: 1px;
+    background-color: var(--accC);
+    color: var(--accC);
+    flex-grow: 1;
+}
+.testimonials p{
+    text-align: right;
+}
 .testimonials:hover{
     scale: 1.03;
+    color: var(--accC);
+}
+.testimonials:hover p .dLink{
+    color: var(--accC);
+}
+.testimonials p .dLink{
+    text-decoration: none;
+    color: var(--pbrandC);
+    display: inline;
+    text-align: right;
+}
+.quoteMark{
+    fill: var(--pbrandC);
+    color: var(--pbrandC);
+}
+.testimonials:hover .quoteMark{
+    fill: var(--accC);
     color: var(--accC);
 }
 .textBlock h2{
@@ -114,6 +145,11 @@ label{
     display: flex;
     align-items: center;
 }
+.logoImage{
+    height: 15vw;
+    float: left;
+    border-radius: 50%;
+}
 .navBar{
     background-color: var(--pbrandC);
     padding: var(--padding);
@@ -122,14 +158,12 @@ label{
     font-size: 4vw;
     font-weight: bold;
 }
-.logoImage{
-    height: 10vw;
-    float: left;
-}
 .hamburger{
     font-size: 1.2rem;
     background: none;
     display: none;
+    margin-left: 20vw;
+    margin-right: 0vw;
 }
 .sideBarDrop{
     position: fixed;
@@ -236,6 +270,18 @@ footer .navLink, a{
     display: flex;
     align-items: center;   
 }
+.icon:hover{
+    scale: 1.3;
+}
+.instagram:hover{
+    fill: pink;
+}
+.gmail:hover{
+    color: red;
+}
+.whatsapp:hover{
+    fill: green;
+}
 @media(max-width: 550px){
     .navLinks{
         display: none;
@@ -245,6 +291,9 @@ footer .navLink, a{
     }
     .profileCard{
         flex-direction: column;
+    }
+    .debatorName{
+        text-align: center;
     }
 }
 .timeline{

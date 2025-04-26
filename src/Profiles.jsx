@@ -11,6 +11,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Anita Sofia',
@@ -23,6 +24,7 @@ function Profiles(){
             rumor:"She breaks hearts as often as she does debate rounds",
             passion:'Crotcheting',
             trainer:'',
+            id:'',
             isVisible:true
         },
         {name:'Keneth Mwaniki',
@@ -35,18 +37,33 @@ function Profiles(){
             rumor:'',
             passion:'Sci-fi',
             trainer:'',
+            id:'ken',
             isVisible:true
         },
-        {name:'Jeremy Weru',
-            yearsActive:'2024-present',
-            clubRoles:'Transport Co-ordinator(peer-pressured into it)',
-            alias:'Mras',
-            accolades:"Ill'ouwa 2 Novice Champion; KUDC PS 4th Best Judge",
-            photo:'/jeremy.jpg',
-            catchPhrase:'The absence of evidence, ...',
-            rumor:'Strangers assume he loves herbs😂',
-            passion:"Knowledge (He's legit a walking encyclopedia)",
+        {name:'Wambugu Muhota',
+            yearsActive:'2023-present',
+            clubRoles:'Training Coordinator/Interim President 24-25',
+            accolades:"Convenor ILO’UWA Debates II, CA Africa Child Debators Inaugural tournament,UNICONNECT Final Champions,KUDC 2.0 BEST JUDGE (PS),UNICONNECT Best Male Speaker, INDABA II BEST JUDGE (DEBATE),Athena Women’s Festival '24 - Finalist & 1st Runner Up,Kampala Opens Quarterfinalist, KUDC 1.0 Quarterfinalist, Mashujaa IX 2nd Best Novice Speaker",
+            photo:'/ted.jpg',
+            catchPhrase:'"Have you met Ted?"',
+            alias:" Teddy 'THE' BEAR 🐻‍❄",
+            rumor:'loves like Ted Mosby (mostly true😅😅😅) so the character development mileage on this nigga is real',
+            passion:'Climate and Social Justice',
+            trainer:'Associate Trainer at JUJA PRE SENIOR SCHOOL',
+            id:'',
+            isVisible:true
+        },
+        {name:'Lucy Osenyi',
+            yearsActive:'2022-Present',
+            clubRoles:'Secretary(2023-2024)',
+            accolades:"7th best public speaker KUDC 2024,3rd best judge KUDC -Nyanza/Western Reginald 2025, Best Public Speaker CUETA 1.0, Novice Champion Ilo'uwa 1.0",
+            photo:'/lucy.jpg',
+            catchPhrase:'I feel like...',
+            alias:'L.A',
+            rumor:'',
+            passion:'Adventure, Networking',
             trainer:'',
+            id:'',
             isVisible:true
         },
         {name:'Desiree Mmasi',
@@ -59,7 +76,21 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
+        },
+        {name:'Jeremy Weru',
+            yearsActive:'2024-present',
+            clubRoles:'Transport Co-ordinator(peer-pressured into it)',
+            alias:'Mras',
+            accolades:"Ill'ouwa 2 Novice Champion; KUDC PS 4th Best Judge",
+            photo:'/jeremy.jpg',
+            catchPhrase:'The absence of evidence, ...',
+            rumor:'Strangers assume he loves herbs😂',
+            passion:"Knowledge (He's legit a walking encyclopedia)",
+            trainer:'',
+            id:'',
+            isVisible:true
         },
         {name:'Bridgette Musango',
             yearsActive:'',
@@ -71,18 +102,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
-            isVisible:false
-        },
-        {name:'Lucy Osenyi',
-            yearsActive:'',
-            clubRoles:'',
-            accolades:'',
-            photo:'',
-            catchPhrase:'',
-            alias:'',
-            rumor:'',
-            passion:'',
-            trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Wanjiru Wanjiku',
@@ -95,6 +115,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Esther Mamai',
@@ -107,6 +128,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Esther Nyamwathi',
@@ -119,6 +141,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Peter Ndwati',
@@ -131,6 +154,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Victoria Kerubo',
@@ -143,6 +167,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Yvonne Kavithe',
@@ -155,19 +180,8 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
-        },
-        {name:'Wambugu Muhota',
-            yearsActive:'2023-present',
-            clubRoles:'Training Coordinator/Interim President 24-25',
-            accolades:"Convenor ILO’UWA Debates II, CA Africa Child Debators Inaugural tournament,UNICONNECT Final Champions,KUDC 2.0 BEST JUDGE (PS),UNICONNECT Best Male Speaker, INDABA II BEST JUDGE (DEBATE),Athena Women’s Festival '24 - Finalist & 1st Runner Up,Kampala Opens Quarterfinalist, KUDC 1.0 Quarterfinalist, Mashujaa IX 2nd Best Novice Speaker",
-            photo:'/ted.jpg',
-            catchPhrase:'"Have you met Ted?"',
-            alias:" Teddy 'THE' BEAR 🐻‍❄",
-            rumor:'loves like Ted Mosby (mostly true😅😅😅) so the character development mileage on this nigga is real',
-            passion:'Climate and Social Justice',
-            trainer:'Associate Trainer at JUJA PRE SENIOR SCHOOL',
-            isVisible:true
         },
         {name:'George Kiritu',
             yearsActive:'',
@@ -179,6 +193,7 @@ function Profiles(){
             rumor:'',
             passion:'',
             trainer:'',
+            id:'',
             isVisible:false
         },
         {name:'Nina Wairimu',
@@ -191,6 +206,7 @@ function Profiles(){
             rumor:'She once almost won a tournament tipsy🤫',
             passion:'Discourse',
             trainer:'Various under The Debate Circle',
+            id:'nina',
             isVisible:true
         },
         {name:'Ivan Oyunde',
@@ -317,10 +333,10 @@ function Profiles(){
     function profiler(d,i){
         if(d.isVisible)        
         return(
-            <div className="profileCard" key={i}>
-                <img src={d.photo} alt={d.name} style={{flexGrow:'1'}}/>
+            <div className="profileCard" key={i} id={d.id}>
+                <img src={d.photo} alt={d.name} style={{flexGrow:'1',alignSelf:'center'}}/>
                 <div className="profileDetails"style={{flexGrow:'2'}}>
-                <h2 style={{margin:'0px'}}>{d.name}</h2>
+                <h2 style={{margin:'0px'}} className="debatorName">{d.name}</h2>
                 {d.alias!==''?<p><strong>Alias: </strong>{d.alias}</p>:''}
                 {d.clubRoles!==''?<p><strong>Club Roles: </strong>{d.clubRoles}</p>:''}
                 {d.accolades!==''?<p><strong>Accolades: </strong>{d.accolades}</p>:''}
