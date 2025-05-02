@@ -353,3 +353,9 @@ footer .navLink, a{
     border-radius: 1rem;
     font-weight: bold;   
 }
+textarea{
+    border-radius: 1rem;
+    font-family: var(--primaryFont);
+    padding: 1vw;
+    width:90vw;
+}

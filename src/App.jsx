@@ -1,4 +1,5 @@
 import Articles from './Articles.jsx';
+import Admin from './Admin.jsx';
 import Home from './Home.jsx';
 import Motions from './Motions.jsx';
 import Profiles from './Profiles.jsx';
@@ -53,6 +54,7 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/timelines" element={<Timelines />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       </main>
