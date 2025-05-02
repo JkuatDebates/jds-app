@@ -26,7 +26,7 @@ function Admin(){
     const motionTypesRef=useRef(null);
     const motionsRef=useRef([]);    
 
-    axios.get('http://localhost:3500/motions')
+    axios.get('https://jdsbackend.onrender.com/motions')
         .then(response=>{
             motionsRef.current=[];
             motionsRef.current=[...response.data];
@@ -101,7 +101,7 @@ function Admin(){
         e.preventDefault();
         //console.log(newMotion);
         try{
-            await axios.post('http://localhost:3500/motions',newMotion);
+            await axios.post('https://jdsbackend.onrender.com/motions',newMotion);
             setNewMotion({
                     motion:'',
                     infoslide:'',
@@ -120,7 +120,7 @@ function Admin(){
     async function deleteMotion(e){
         try{
             //console.log(e._id);
-            await axios.delete(`http://localhost:3500/motions/${e._id}`)
+            await axios.delete(`https://jdsbackend.onrender.com/motions/${e._id}`)
             .then(()=>console.log(`${e.motion} has been deleted`));
             renderMotions(2);
         }
