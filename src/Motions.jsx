@@ -1,5 +1,6 @@
 import { Search } from "lucide-react"
 import { useRef, useState} from "react"
+import axios from "axios";
 
 function Motions(){
     const [displayedMotions, setDisplayedMotions]=useState([]);
@@ -10,21 +11,19 @@ function Motions(){
     const [randomMotion, setRandomMotion]=useState('');
     const motionTypes=['','Value', 'Actor', 'Policy', 'Comparative','Narrative'];
 
-    fetch('/motions.json')
+    axios.get('https://jdsbackend.onrender.com/motions')
         .then(response=>{
-            !response.ok? console.error('json not loaded')
-            :null;
-            return response.json(); 
-        })
-        .then(arr=>{
             motionsRef.current=[];
-            arr.forEach(element => {
-            motionsRef.current=[...motionsRef.current,element];
-        });
-    });
+            motionsRef.current=[...response.data];
+            //console.log(response.data);
+        })
+        .catch(err=>console.error(err));
+        //.catch(()=>console.log('no mongo'));
+    
 
     function renderMotions(b){
-        //b for button pressed
+        if(motionsRef.current!=[]){
+            //b for button pressed
         let v;
         let filteredMotions=[];
         let filteredSearch=[];
@@ -64,6 +63,7 @@ function Motions(){
                 searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
                     .includes(searchRef.current.value.toLowerCase()));
                 setDisplayedMotions(searchedMotionsRef.current);
+                console.log(searchedMotionsRef.current[0].infoslide);
                 break;
             case 4://motion type set to ''
                 searchRef.current.value===''? setDisplayedMotions([])
@@ -71,14 +71,16 @@ function Motions(){
                         .includes(searchRef.current.value.toLowerCase())));
                 break; 
             default:setDisplayedMotions([]);
-        }               
+        }
+        }
+                       
     }
     function ranMotion(){
-        //console.log(motionsRef.current.length);
-        let ran=motionsRef.current[Math.floor(Math.random()*(motionsRef.current.length-1))];
-        ran.infoslide!==undefined?
-        setRandomMotion(ran): console.log(ran);
-
+        if(motionsRef.current.length!==0){
+            //console.log(motionsRef.current.length);
+            let ran=motionsRef.current[Math.floor(Math.random()*(motionsRef.current.length-1))];
+            setRandomMotion(ran);
+            }
     }
 
     function shuffle(array){
