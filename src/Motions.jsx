@@ -63,7 +63,7 @@ function Motions(){
                 searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
                     .includes(searchRef.current.value.toLowerCase()));
                 setDisplayedMotions(searchedMotionsRef.current);
-                console.log(searchedMotionsRef.current[0].infoslide);
+                //console.log(searchedMotionsRef.current[0].infoslide);
                 break;
             case 4://motion type set to ''
                 searchRef.current.value===''? setDisplayedMotions([])
