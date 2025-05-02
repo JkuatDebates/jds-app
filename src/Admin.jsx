@@ -199,7 +199,7 @@ export function UpdateCard({motion}){
         e.preventDefault();
         //console.log(umotion);
         try{
-            axios.put('http://localhost:3500/motions',umotion)
+            axios.put('https://jdsbackend.onrender.com/motions',umotion)
                 .then(response=>console.log(response.data));
         }
         catch(err){
