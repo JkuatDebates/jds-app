@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 
 const motionTypes=['','Value', 'Actor', 'Policy', 'Comparative','Narrative'];
 
-function Admin(){
+function MotionsAdmin(){
     const [displayedMotions, setDisplayedMotions]=useState([]);
     const [newMotion, setNewMotion]=useState({
         motion:'',
@@ -187,7 +187,7 @@ function Admin(){
 }
 
 
-export default Admin
+export default MotionsAdmin
 
 export function UpdateCard({motion}){
     const [umotion,setUmotion]=useState({...motion});

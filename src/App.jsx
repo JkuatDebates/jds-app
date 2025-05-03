@@ -1,5 +1,6 @@
 import Articles from './Articles.jsx';
-import Admin from './Admin.jsx';
+import MotionsAdmin from './MotionsAdmin.jsx';
+import ArticlesAdmin from './ArticlesAdmin.jsx';
 import Home from './Home.jsx';
 import Motions from './Motions.jsx';
 import Profiles from './Profiles.jsx';
@@ -54,7 +55,8 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/timelines" element={<Timelines />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/motions" element={<MotionsAdmin />} />
+        <Route path="/admin/articles" element={<ArticlesAdmin />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
       </main>
