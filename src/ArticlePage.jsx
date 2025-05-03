@@ -13,7 +13,7 @@ function ArticlePage(){
     useEffect(()=>{
             const fetchArticle=async ()=> {
                 try{
-                    const response= await axios.get('http://localhost:3500/articles');
+                    const response= await axios.get('https://jdsbackend.onrender.com/articles');
                     const res=response.data.find(a=> a._id===id);
                     //console.log(res);
                     setArticle(res);
