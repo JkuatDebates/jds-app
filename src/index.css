@@ -40,7 +40,7 @@ button:active{
     padding: var(--padding);
     font-family: var(--primaryFont);
     border-radius: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.3rem;
 }
 .profileCard{
     background-color: var(--pbrandC);
@@ -270,6 +270,9 @@ footer .navLink, a{
     display: flex;
     align-items: center;   
 }
+.icon{
+    color: var(--accC);
+}
 .icon:hover{
     scale: 1.3;
 }
@@ -358,4 +361,36 @@ textarea{
     font-family: var(--primaryFont);
     padding: 1vw;
     width:90vw;
+}
+.authorPic{
+    width: 3rem;
+    border-radius: 40%;
+    display: inline;
+}
+.search{
+    width: 90vw;
+    border-radius: 50px;
+    display: flex;
+    border: 1px solid;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: hsl(0, 0%, 80%);
+}
+.search:hover{
+    box-shadow: 5px 5px 5px var(--accC);
+}
+.search input{
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+}
+.search input:focus{
+    border: none;
+    outline: none;
+}
+.search .icon{
+    color: var(--accC);
+}
+.article{
+    font-family: var(--secoFont);
 }

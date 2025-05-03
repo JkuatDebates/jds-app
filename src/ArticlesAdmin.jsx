@@ -40,7 +40,8 @@ function ArticlesAdmin(){
         cbref.current.style.height=`auto`;
         try{
             if(article.author!==''&&article.title!==''&&article.content!=='')
-                axios.post('https://jdsbackend.onrender.com/articles',article);
+                axios.post('https://jdsbackend.onrender.com/articles',article)
+                    .then(console.log('post succesful'));
             else{
                 console.log('fill the necessary');
             }
@@ -60,7 +61,8 @@ function ArticlesAdmin(){
     }
     function deleteArticle(a){
         try{
-            axios.delete('https://jdsbackend.onrender.com/articles',{data: a});
+            axios.delete('https://jdsbackend.onrender.com/articles',{data: a})
+                .then(res=>console.log(res));
             setRerender(!rerender);
         }
         catch(err){

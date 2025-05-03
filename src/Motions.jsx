@@ -21,60 +21,68 @@ function Motions(){
         //.catch(()=>console.log('no mongo'));
     
 
-    function renderMotions(b){
-        if(motionsRef.current!=[]){
-            //b for button pressed
-        let v;
-        let filteredMotions=[];
-        let filteredSearch=[];
-        switch(b){
-            case 0: 
-                v=0;
-                break;
-            case 1:
-                (searchRef.current.value==='')? v=1: v=2;
-                if(motionTypesRef.current.value==='') v=4;
-                break;
-            case 2:
-                motionTypesRef.current.value!==''? v=2:v=3;
-                break;
-        }
-        
-
-        switch(v){
-            case 0://motion type:'', search:''
-                motionTypesRef.current.value='';
-                searchRef.current.value='';
-                setDisplayedMotions([]);
-                break;
-            case 1://motion type:set, search:unset [type select]
-                filteredMotions=shuffle(motionsRef.current).filter((m)=>
-                    m.type===motionTypesRef.current.value);
-                setDisplayedMotions(filteredMotions);
-                break;
-            case 2://motion type:set, search:set
-                searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
-                    .includes(searchRef.current.value.toLowerCase()));
-                filteredSearch=searchedMotionsRef.current.filter((m)=>
+        function renderMotions(b){
+            if(motionsRef.current!=[]){
+                //b for button pressed
+            let v;
+            let filteredMotions=[];
+            let filteredSearch=[];
+            let searched=[];
+            switch(b){
+                case 0: 
+                    v=0;
+                    break;
+                case 1:
+                    (searchRef.current.value==='')? v=1: v=2;
+                    if(motionTypesRef.current.value==='') v=4;
+                    break;
+                case 2:
+                    motionTypesRef.current.value!==''? v=2:v=3;
+                    break;
+            }
+            
+    
+            switch(v){
+                case 0://motion type:'', search:''
+                    motionTypesRef.current.value='';
+                    searchRef.current.value='';
+                    setDisplayedMotions([]);
+                    break;
+                case 1://motion type:set, search:unset [type select]
+                    filteredMotions=shuffle(motionsRef.current).filter((m)=>
                         m.type===motionTypesRef.current.value);
-                setDisplayedMotions(filteredSearch);
-                break;
-            case 3://motion type:unset, search:set
-                searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
+                    filteredMotions.length!==0?
+                    setDisplayedMotions(filteredMotions):
+                    setDisplayedMotions([{motion: 'No motion to display', infoslide:''}]);
+                    break;
+                case 2://motion type:set, search:set
+                    searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
+                        .includes(searchRef.current.value.toLowerCase()));
+                    filteredSearch=searchedMotionsRef.current.filter((m)=>
+                            m.type===motionTypesRef.current.value);
+                    filteredSearch.length!==0?
+                    setDisplayedMotions(filteredSearch):
+                    setDisplayedMotions([{motion: 'No motion to display',infoslide:''}]);
+                    break;
+                case 3://motion type:unset, search:set
+                    searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
+                        .includes(searchRef.current.value.toLowerCase()));
+                    searchedMotionsRef.current!==0?
+                    setDisplayedMotions(searchedMotionsRef.current):
+                    setDisplayedMotions([{motion: 'No motion to display',infoslide:''}]);
+                    break;
+                case 4://motion type set to ''
+                    searched=motionsRef.current.filter((m)=>m.motion.toLowerCase()
                     .includes(searchRef.current.value.toLowerCase()));
-                setDisplayedMotions(searchedMotionsRef.current);
-                //console.log(searchedMotionsRef.current[0].infoslide);
-                break;
-            case 4://motion type set to ''
-                searchRef.current.value===''? setDisplayedMotions([])
-                :setDisplayedMotions(motionsRef.current.filter((m)=>m.motion.toLowerCase()
-                        .includes(searchRef.current.value.toLowerCase())));
-                break; 
-            default:setDisplayedMotions([]);
+                    searchRef.current.value===''? setDisplayedMotions([])
+                    :searched.length!==0? 
+                    setDisplayedMotions(searched):
+                    setDisplayedMotions([{motion: 'No motion to display',infoslide:''}]);
+                    break; 
+                default:setDisplayedMotions([]);
+            }
+            }                
         }
-        }
-                       
-    }
     function ranMotion(){
         if(motionsRef.current.length!==0){
             //console.log(motionsRef.current.length);
@@ -113,9 +121,10 @@ function Motions(){
                     <option key={index}>{type}</option>
                     ))}
             </select> &nbsp;
-            <input type="text" className="searchBar" placeholder="Search motion"
-            ref={searchRef}/>
-            <button style={{padding:'5px'}} onClick={()=>renderMotions(2)}><Search size={'1.5rem'}/></button>
+            <div className="search">
+                <Search size={'1.2rem'} className="icon" onClick={()=>renderMotions(2)}/><input type="text" placeholder="Search motion"
+            ref={searchRef} onKeyDown={(e)=>e.key==='Enter'&& renderMotions(2)}/>
+            </div>
         </div>
         <div>
             <button onClick={()=>renderMotions(0)}>Refresh</button>

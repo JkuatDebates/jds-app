@@ -42,6 +42,7 @@ function MotionsAdmin(){
         let v;
         let filteredMotions=[];
         let filteredSearch=[];
+        let searched=[];
         switch(b){
             case 0: 
                 v=0;
@@ -65,29 +66,37 @@ function MotionsAdmin(){
             case 1://motion type:set, search:unset [type select]
                 filteredMotions=shuffle(motionsRef.current).filter((m)=>
                     m.type===motionTypesRef.current.value);
-                setDisplayedMotions(filteredMotions);
+                filteredMotions.length!==0?
+                setDisplayedMotions(filteredMotions):
+                setDisplayedMotions([{motion: 'No motion to display', infoslide:''}]);
                 break;
             case 2://motion type:set, search:set
                 searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
                     .includes(searchRef.current.value.toLowerCase()));
                 filteredSearch=searchedMotionsRef.current.filter((m)=>
                         m.type===motionTypesRef.current.value);
-                setDisplayedMotions(filteredSearch);
+                filteredSearch.length!==0?
+                setDisplayedMotions(filteredSearch):
+                setDisplayedMotions([{motion: 'No motion to display',infoslide:''}]);
                 break;
             case 3://motion type:unset, search:set
                 searchedMotionsRef.current=motionsRef.current.filter((m)=>m.motion.toLowerCase()
                     .includes(searchRef.current.value.toLowerCase()));
-                setDisplayedMotions(searchedMotionsRef.current);
+                searchedMotionsRef.current.length!==0?
+                setDisplayedMotions(searchedMotionsRef.current):
+                setDisplayedMotions([{motion: 'No motion to display',infoslide:''}]);
                 break;
             case 4://motion type set to ''
+                searched=motionsRef.current.filter((m)=>m.motion.toLowerCase()
+                .includes(searchRef.current.value.toLowerCase()));
                 searchRef.current.value===''? setDisplayedMotions([])
-                :setDisplayedMotions(motionsRef.current.filter((m)=>m.motion.toLowerCase()
-                        .includes(searchRef.current.value.toLowerCase())));
+                :searched.length!==0? 
+                setDisplayedMotions(searched):
+                setDisplayedMotions([{motion: 'No motion to display',infoslide:''}]);
                 break; 
             default:setDisplayedMotions([]);
         }
-        }
-                       
+        }                
     }
     function shuffle(array){
         const shuffledArray=[...array];
@@ -161,9 +170,10 @@ function MotionsAdmin(){
                     <option key={index}>{type}</option>
                     ))}
             </select> &nbsp;
-            <input type="text" className="searchBar" placeholder="Search motion"
-            ref={searchRef}/>
-            <button style={{padding:'5px'}} onClick={()=>renderMotions(2)}><Search size={'1.5rem'}/></button>
+            <div className="search">
+                <Search size={'1.2rem'} className="icon" onClick={()=>renderMotions(2)}/><input type="text" placeholder="Search motion"
+            ref={searchRef} onKeyDown={(e)=>e.key==='Enter'&& renderMotions(2)}/>
+            </div>
         </div>
         {isUpdate&&<div id="updMotions" className="textBlock">
             <h3>Update Motion</h3>

@@ -43,14 +43,14 @@ export const upcomingEvents=events.filter(e=>e.date>=today)
         .sort((a,b)=>b.date.localeCompare(a.date));
 const pastEvents=events.filter(e=>e.date<=today)
             .sort((a,b)=>b.date.localeCompare(a.date));
-function Timelines(){
+function Events(){
 
     function eventList(events){
         return events.map((e,i)=>(<EventCard key={i} event={e}/>))
     }
     
     return(
-        <div className="timeline">
+        <div className="events">
             <h1>JDS and Circuit Events</h1>
             <div className="upcomingEvents">
                 <h3>Upcoming Events</h3>
@@ -85,4 +85,4 @@ export function EventCard({event}){
         </div>
     );
 }
-export default Timelines
+export default Events
