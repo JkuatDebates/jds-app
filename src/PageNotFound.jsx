@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function PageNotFound(){
-
+    const navigate=useNavigate();
     return(
         <div>
             <p>Seems like the page you are looking for does not exist</p>
-            <Link to="/" ><button>Go Home</button></Link>
+            <button onClick={()=>navigate('/')}>Go Home</button>
+            <button onClick={()=>navigate(-1)}>Go back</button>
         </div>
     )
 }

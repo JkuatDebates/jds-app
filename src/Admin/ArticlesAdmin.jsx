@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function ArticlesAdmin(){
+    const navigate=useNavigate();
     const articleTagRef=useRef(['Other','Debate Topics','Personal Takes', 'Tournament Review','PS Topics','Training']);
     const cbref=useRef(null);
     const [articles, setArticles]=useState([]);
@@ -73,6 +75,7 @@ function ArticlesAdmin(){
     return(
         <>
         <section className="textBlock">
+            <button onClick={()=>navigate('/admin')}>Admin Panel</button>
             <h3>Create New Article</h3>
             <form onSubmit={formSubmit}>
                 <p>Title: <input type="text" name="title" onChange={handleFormChange} value={article.title}/></p>

@@ -1,7 +1,10 @@
 import Articles from './Articles.jsx';
-import MotionsAdmin from './MotionsAdmin.jsx';
-import ArticlesAdmin from './ArticlesAdmin.jsx';
+import MotionsAdmin from './Admin/MotionsAdmin.jsx';
+import EventsAdmin from './Admin/EventsAdmin.jsx';
+import ProfilesAdmin from './Admin/ProfilesAdmin.jsx';
+import ArticlesAdmin from './Admin/ArticlesAdmin.jsx';
 import ArticlePage from './ArticlePage.jsx';
+import Admin from './Admin/Admin.jsx';
 import Home from './Home.jsx';
 import Motions from './Motions.jsx';
 import Profiles from './Profiles.jsx';
@@ -57,7 +60,10 @@ function App() {
         <Route path="/articles/:id" element={<ArticlePage />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/profiles" element={<ProfilesAdmin />} />
         <Route path="/admin/motions" element={<MotionsAdmin />} />
+        <Route path="/admin/events" element={<EventsAdmin />} />
         <Route path="/admin/articles" element={<ArticlesAdmin />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>

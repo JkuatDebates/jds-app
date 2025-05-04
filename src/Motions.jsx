@@ -110,6 +110,8 @@ function Motions(){
                     randomMotion.infoslide!==undefined)?
                     <p>{randomMotion.infoslide}</p>:''}
                 {randomMotion.motion}
+                {randomMotion.motion!==''&& randomMotion.motion!==undefined && <h6 style={{margin:'0.5rem'}}>{randomMotion.source? [randomMotion.source]: 'JDS'}</h6>}
+                
             </div>
         </div>
         <div className="textBlock">
@@ -132,7 +134,8 @@ function Motions(){
                 {displayedMotions.map((e,i)=>(
                     <div key={i} className="motionCard"> 
                     {e.infoslide!==''?<p>{e.infoslide}</p>:''}
-                    <br />{e.motion}
+                    <br />{e.motion} <br />
+                    <h6 style={{margin:'0.5rem'}}>{e.source? [e.source]: 'JDS'}</h6>
                     </div>
                 ))}
             </div>

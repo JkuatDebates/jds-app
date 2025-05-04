@@ -1,6 +1,7 @@
 import { Search, XIcon } from "lucide-react"
 import axios from "axios";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const motionTypes=['','Value', 'Actor', 'Policy', 'Comparative','Narrative'];
 
@@ -24,7 +25,8 @@ function MotionsAdmin(){
     const searchedMotionsRef=useRef([]);
     const searchRef=useRef(null);
     const motionTypesRef=useRef(null);
-    const motionsRef=useRef([]);    
+    const motionsRef=useRef([]);
+    const navigate=useNavigate();    
 
     axios.get('https://jdsbackend.onrender.com/motions')
         .then(response=>{
@@ -148,6 +150,7 @@ function MotionsAdmin(){
         <>
                
         <div className="textBlock">
+           <button onClick={()=>navigate('/admin')}>Admin Panel</button>
             <h3>Add motion</h3>
             <form onSubmit={submitMotion} style={{display:'flex', flexDirection:'column',gap:'0px'}}>
                 <p>Motion:<textarea value={newMotion.motion} name="motion" onChange={writeMotion}></textarea></p>
@@ -186,7 +189,9 @@ function MotionsAdmin(){
                 {displayedMotions.map((e,i)=>(
                     <div key={i} className="motionCard">
                     {e.infoslide!==''&&<p>{e.infoslide}</p>}
-                    <br />{e.motion} <br /><button onClick={()=>deleteMotion(e)}>Delete</button>
+                    <br />{e.motion}<br />
+                    <h6 style={{margin:'0.5rem'}}>{e.source? [e.source]: 'JDS'}</h6> 
+                    <br /><button onClick={()=>deleteMotion(e)}>Delete</button>
                     <button onClick={()=>updateMotion(e)}>Update</button>
                     </div>
                 ))}
@@ -210,6 +215,13 @@ export function UpdateCard({motion}){
         //console.log(umotion);
         try{
             axios.put('https://jdsbackend.onrender.com/motions',umotion)
+                .then(()=>setUmotion({
+                    motion:'',
+                    infoslide:'',
+                    type:'',
+                    theme:'',
+                    source:''
+            }))
                 .then(response=>console.log(response.data));
         }
         catch(err){
