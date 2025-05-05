@@ -27,9 +27,9 @@ function App() {
     <>
     <Router>
       <nav className='navBar'>
-        <div className='logo'>
+        <div className='logo'><Link to="/">
           <img src="/jds.jpg" className='logoImage' alt="JDS logo" />
-          <p>{"\u00A0"}JKUAT Debate Society</p>
+          <p>{"\u00A0"}JKUAT Debate Society</p></Link>
           <button className='hamburger' 
           onClick={handleSidebar}>&#9776;</button>
         </div>

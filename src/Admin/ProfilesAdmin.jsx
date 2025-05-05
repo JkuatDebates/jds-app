@@ -1,11 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {currentServer} from '../assets/urls';
-import {  } from "lucide-react";
+import { Search } from "lucide-react";
 
 function ProfilesAdmin(){
     const navigate=useNavigate();
+    const searchRef=useRef(null);
     const [creating, setCreating]=useState(false);
     const [updating, setUpdating]=useState(false);
     const [loading, setLoading]=useState(true);
@@ -24,13 +25,15 @@ function ProfilesAdmin(){
         isVisible:false    
     });
     const [updatedProfile, setUpdatedProfile]=useState([]);
-    const [profiles, setProfiles]= useState([]);
+    const [profiles, setProfiles]= useState(null);
+    const [displayed, setDisplayed]= useState(null);
     const fetchProfiles=async ()=> {
         try{
             const response= await axios.get(`${currentServer}/profiles`);
             const res=response.data;
             console.log(res.length);
             setProfiles(res);
+            setDisplayed(res);
             setLoading(false);
         }
         catch(err){
@@ -210,6 +213,15 @@ function ProfilesAdmin(){
             alert('delete unsuccessful');
         }
     }
+    function search(){
+        const searched=searchRef.current.value;
+        //console.log(searched);
+        const searchedProfiles=profiles.filter(p=>p.name.toLowerCase().includes(searched.toLowerCase())|| p.alias.toLowerCase().includes(searched.toLowerCase()));
+        console.log(searchedProfiles);
+        searchedProfiles.length!==0? 
+            setDisplayed([...searchedProfiles])
+            : setDisplayed([{photo:null, name:'No Profile Found'}])
+    }
     function setDates(d){
         const date=d.split('T')[0];
         return date;
@@ -300,16 +312,20 @@ function ProfilesAdmin(){
     {loading?<p>Loading...</p>:
     <div className="textBlock">
         <h2>Existing Profiles</h2>
-        {profiles.map((p,i)=>
+        <div className="search">
+            <Search onClick={search} className="icon"/>
+            <input type="text" ref={searchRef} placeholder="Search for a profile" onChange={search}/>
+        </div>
+        {displayed&& displayed.map((p,i)=>
         <div key={i} style={{display:'flex',flexDirection:"row", alignItems:'center'}}>
-            <img src={p.photo} alt={`${p.name} image`} style={{width:'50px', borderRadius:'5px'}}/>
-            <strong style={{flexGrow:'1'}}>{p.name}</strong>
-            <button onClick={()=>{
+            <img src={p.photo} alt={`${p.name} image`} style={{width:'50px', borderRadius:'5px'}}/><div style={{flexGrow:'1',marginLeft:'1rem'}}><strong >{p.name} </strong><p style={{marginTop:'5px', fontSize:"1rem"}}>{p.alias}</p></div>
+            {displayed[0].name!=='No Profile Found'&&<>
+                <button onClick={()=>{
                 setUpdating(true);
                 setUpdatedProfile({...p, startYear: setDates(p.startYear), accolades:p.accolades.join(','), passions:p.passions.join(','), trainingRoles:p.trainingRoles.join(','), clubRoles:p.clubRoles.join(',')}); //turn arrays to strings using array.join()
                 document.getElementById('updateSection').scrollIntoView({behavior:'smooth'});
                 }}>Update </button>
-            <button type="button" onClick={()=>deleteProfile(p)}>Delete </button>
+            <button type="button" onClick={()=>deleteProfile(p)}>Delete </button></>}
         </div>
         )}
     </div>}

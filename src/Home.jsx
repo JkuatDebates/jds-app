@@ -100,7 +100,7 @@ function Home(){
                             <h4>{t.test}</h4>
                             <div className='lineAuthor'>
                                 <div className='line'></div>
-                                <p><Link to={`/profiles#${t.id}`} className='dLink'>{t.author}</Link></p>                            
+                                <p><Link to={`/profiles#${t.author.split(' ',1)[0]}`} className='dLink'>{t.author}</Link></p>                            
                             </div>
                         </div>
                     </SwiperSlide>
