@@ -31,7 +31,7 @@ function ProfilesAdmin(){
         try{
             const response= await axios.get(`${currentServer}/profiles`);
             const res=response.data;
-            console.log(res.length);
+            console.log(res);
             setProfiles(res);
             setDisplayed(res);
             setLoading(false);
@@ -53,9 +53,22 @@ function ProfilesAdmin(){
         if(e.target.type==='file'){
             setNewProfile({...newProfile, [e.target.name]:e.target.files[0]});
         }
-        else{
+        else if(e.target.name!=='isVisible'){
             setNewProfile({...newProfile, [e.target.name]:e.target.value});
         }
+        else {
+            try{
+                switch(e.target.value){
+                    case 'true':setNewProfile({...newProfile, isVisible:true});
+                    break;
+                    case 'false':setNewProfile({...newProfile, isVisible:false});
+                    break;
+                    default: console.log('radio noise');
+                }
+            } catch(err){
+                console.log(err);
+            }
+        }   
         
     }
     async function newFormSubmit(e){
@@ -69,6 +82,7 @@ function ProfilesAdmin(){
         formData.append('rumor', newProfile.rumor);
         formData.append('startYear', newProfile.startYear);
         formData.append('stillActive', newProfile.stillActive);
+        formData.append('isVisible', newProfile.isVisibl);
 
         formData.append('accolades', JSON.stringify(
             newProfile.accolades 
@@ -129,8 +143,17 @@ function ProfilesAdmin(){
         if(e.target.type==='file'){
             setUpdatedProfile({...updatedProfile, [e.target.name]:e.target.files[0]});
         }
-        else{
+        else if(e.target.name!=='isVisible'){
             setUpdatedProfile({...updatedProfile, [e.target.name]:e.target.value});
+        }
+        else {
+            switch(e.target.value){
+                case 'true':setUpdatedProfile({...updatedProfile, isVisible:true});
+                break;
+                case 'false':setUpdatedProfile({...updatedProfile, isVisible:false});
+                break;
+                default: console.log('radio noise');
+            }
         }   
     }
     async function updateFormSubmit(e){
@@ -146,6 +169,7 @@ function ProfilesAdmin(){
         formData.append('startYear', updatedProfile.startYear);
         formData.append('stillActive', updatedProfile.stillActive);
         formData.append('_id', updatedProfile._id);
+        formData.append('isVisible', updatedProfile.isVisible);
 
         formData.append('accolades', JSON.stringify(
             updatedProfile.accolades 
@@ -235,7 +259,7 @@ function ProfilesAdmin(){
         <h2 style={{display:"inline"}}>Add a profile</h2>
         <button onClick={()=>setCreating(!creating)}>+</button>
     </div>
-    <section>
+    <section id='newFormSection'>
     {creating &&
     <form onSubmit={newFormSubmit}>
         <h2>New Profile</h2>
@@ -255,8 +279,8 @@ function ProfilesAdmin(){
                 <option value="false">No</option>
             </select>
         </label>
-        <label >Public Profile?<input type="radio" name="isVisible" onChange={newFormChange} value='true'/>Yes</label>
-        <label ><input type="radio" name="isVisible"onChange={newFormChange} value='false'/>No</label><br />
+        <label >Public Profile?<input type="radio" name="isVisible" onChange={newFormChange} value='true' checked={newProfile.isVisible===true}/>Yes</label>
+        <label ><input type="radio" name="isVisible" onChange={newFormChange} value='false' checked={newProfile.isVisible===false}/>No</label><br />
         <button type="submit">Submit</button>
         <button type="button" onClick={()=>{
             setCreating(false);
@@ -298,8 +322,8 @@ function ProfilesAdmin(){
                 <option value="false">No</option>
             </select>
         </label>
-        <label >Public Profile?<input type="radio" name="isVisible" onChange={updateFormChange} value='true'/>Yes</label>
-        <label ><input type="radio" name="isVisible"onChange={updateFormChange} value='false'/>No</label><br />
+        <label >Public Profile?<input type="radio" name="isVisible" onChange={updateFormChange} value='true' checked={updatedProfile.isVisible===true}/>Yes</label>
+        <label ><input type="radio" name="isVisible"onChange={updateFormChange} value='false' checked={updatedProfile.isVisible===false}/>No</label><br />
         <button type="submit">Update</button>
         <button type="button" onClick={()=>{
             setUpdating(false);
@@ -308,7 +332,7 @@ function ProfilesAdmin(){
     </form>
     }
     </section>
-    <section>
+    <section id="profilesView">
     {loading?<p>Loading...</p>:
     <div className="textBlock">
         <h2>Existing Profiles</h2>
@@ -318,7 +342,10 @@ function ProfilesAdmin(){
         </div>
         {displayed&& displayed.map((p,i)=>
         <div key={i} style={{display:'flex',flexDirection:"row", alignItems:'center'}}>
-            <img src={p.photo} alt={`${p.name} image`} style={{width:'50px', borderRadius:'5px'}}/><div style={{flexGrow:'1',marginLeft:'1rem'}}><strong >{p.name} </strong><p style={{marginTop:'5px', fontSize:"1rem"}}>{p.alias}</p></div>
+            <img src={p.photo} alt={`${p.name} image`} style={{width:'50px', borderRadius:'5px'}}/><div style={{flexGrow:'1',marginLeft:'1rem'}}><strong >{p.name} </strong>
+            {p.isVisible? 
+            <p style={{marginTop:'5px', fontSize:"1rem", color:'hsl(166, 100%, 20%)'}} >{p.alias}</p>
+            :<p style={{marginTop:'5px', fontSize:"1rem", color:'hsl(0, 100.00%, 20.00%)'}} >{p.alias}</p>}</div>
             {displayed[0].name!=='No Profile Found'&&<>
                 <button onClick={()=>{
                 setUpdating(true);

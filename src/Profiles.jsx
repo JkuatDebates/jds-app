@@ -52,7 +52,7 @@ function Profiles(){
      },[location]);
     
     function profiler(d,i){
-        //if(d.isVisible)        
+        if(d.isVisible)        
         return(
             <div className="profileCard" key={i} id={d.name.split(' ',1)[0]}>
                 <img src={d.photo} alt={d.name} style={{flexGrow:'1',alignSelf:'center'}}/>
