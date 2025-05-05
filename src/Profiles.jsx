@@ -41,6 +41,10 @@ function Profiles(){
                 const element=document.getElementById(id);
                 if(element){
                     element.scrollIntoView({behavior:'smooth'});
+                    //remove hash to prevent scroll on refresh of the page
+                    setTimeout(()=>{
+                        window.history.replaceState(null,"",location.pathname);
+                    },100)
                 }
                 else console.log(element);
             }, 500);
