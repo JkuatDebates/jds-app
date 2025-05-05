@@ -431,3 +431,32 @@ textarea{
     padding: 1%;
 
 }
+form{
+    background-color: hsl(0, 0%, 90%);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+form h2{
+    font-family: var(--primaryFont);
+    justify-self: center;
+}
+form input,select{
+    width: 80vw;
+    max-width: 700px;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    padding: 8px;
+}
+form input[type="radio"]{
+    display: inline;
+    width: auto;
+}
+form label:hover{
+    color: var(--accC);
+    font-weight: bold;
+}
+form input:hover, input:focus, select:hover, select:focus{
+    box-shadow: 5px 5px 3px var(--accC);
+    outline: none;
+}

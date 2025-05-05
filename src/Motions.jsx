@@ -1,6 +1,7 @@
 import { Search } from "lucide-react"
 import { useRef, useState} from "react"
 import axios from "axios";
+import { currentServer } from "./assets/urls";
 
 function Motions(){
     const [displayedMotions, setDisplayedMotions]=useState([]);
@@ -11,7 +12,7 @@ function Motions(){
     const [randomMotion, setRandomMotion]=useState('');
     const motionTypes=['','Value', 'Actor', 'Policy', 'Comparative','Narrative'];
 
-    axios.get('https://jdsbackend.onrender.com/motions')
+    axios.get(`${currentServer}/motions`)
         .then(response=>{
             motionsRef.current=[];
             motionsRef.current=[...response.data];

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { currentServer } from "../assets/urls";
 
 
 function ArticlesAdmin(){
@@ -9,6 +10,7 @@ function ArticlesAdmin(){
     const cbref=useRef(null);
     const [articles, setArticles]=useState([]);
     const [rerender, setRerender]=useState(false);
+    const [creating, setCreating]=useState(false);
     const [article,setArticle]=useState({
         title:'',
         author:'',
@@ -18,7 +20,7 @@ function ArticlesAdmin(){
         content:'',
         displayed: false
     });
-    axios.get('https://jdsbackend.onrender.com/articles')
+    axios.get(`${currentServer}/articles`)
         .then(response=>{
             setArticles([...response.data]);
             //console.log(articlesRef.current);
@@ -42,7 +44,7 @@ function ArticlesAdmin(){
         cbref.current.style.height=`auto`;
         try{
             if(article.author!==''&&article.title!==''&&article.content!=='')
-                axios.post('https://jdsbackend.onrender.com/articles',article)
+                axios.post(`${currentServer}/articles`,article)
                     .then(console.log('post succesful'));
             else{
                 console.log('fill the necessary');
@@ -56,6 +58,7 @@ function ArticlesAdmin(){
                 content:'',
                 displayed: false
             });
+            setCreating(!creating);
         }
         catch(err){
             console.log(err);
@@ -63,7 +66,7 @@ function ArticlesAdmin(){
     }
     function deleteArticle(a){
         try{
-            axios.delete('https://jdsbackend.onrender.com/articles',{data: a})
+            axios.delete(`${currentServer}/articles`,{data: a})
                 .then(res=>console.log(res));
             setRerender(!rerender);
         }
@@ -75,9 +78,11 @@ function ArticlesAdmin(){
     return(
         <>
         <section className="textBlock">
-            <button onClick={()=>navigate('/admin')}>Admin Panel</button>
-            <h3>Create New Article</h3>
-            <form onSubmit={formSubmit}>
+            <button onClick={()=>navigate('/admin')}>Admin Panel</button><br />
+            <h3 style={{display:"inline"}}>Create New Article</h3>
+            <button onClick={()=>setCreating(!creating)}>+</button>
+            {creating &&
+                <form onSubmit={formSubmit}>
                 <p>Title: <input type="text" name="title" onChange={handleFormChange} value={article.title}/></p>
                 <p>Author: <input type="text" name="author" onChange={handleFormChange}value={article.author}/></p>
                 <p>Date Published: <input type="date" onChange={handleFormChange} value={article.datePublished} name="datePublished"/></p>
@@ -87,7 +92,7 @@ function ArticlesAdmin(){
                 <textarea ref={cbref} name="content" onChange={handleFormChange} value={article.content}></textarea>
                 <button type="submit">Submit</button>
                 <button type="reset">Cancel</button>
-            </form>
+            </form>}
         </section>
         <section className="textBlock">
             <h3>Existing Articles</h3>

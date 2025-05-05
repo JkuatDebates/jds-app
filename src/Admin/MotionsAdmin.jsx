@@ -2,6 +2,7 @@ import { Search, XIcon } from "lucide-react"
 import axios from "axios";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { currentServer } from "../assets/urls";
 
 const motionTypes=['','Value', 'Actor', 'Policy', 'Comparative','Narrative'];
 
@@ -28,7 +29,7 @@ function MotionsAdmin(){
     const motionsRef=useRef([]);
     const navigate=useNavigate();    
 
-    axios.get('https://jdsbackend.onrender.com/motions')
+    axios.get(`${currentServer}/motions`)
         .then(response=>{
             motionsRef.current=[];
             motionsRef.current=[...response.data];
@@ -112,7 +113,7 @@ function MotionsAdmin(){
         e.preventDefault();
         //console.log(newMotion);
         try{
-            await axios.post('https://jdsbackend.onrender.com/motions',newMotion);
+            await axios.post(`${currentServer}/motions`,newMotion);
             setNewMotion({
                     motion:'',
                     infoslide:'',
@@ -131,7 +132,7 @@ function MotionsAdmin(){
     async function deleteMotion(e){
         try{
             //console.log(e._id);
-            await axios.delete(`https://jdsbackend.onrender.com/motions/${e._id}`)
+            await axios.delete(`${currentServer}/motions/${e._id}`)
             .then(()=>console.log(`${e.motion} has been deleted`));
             renderMotions(2);
         }
@@ -214,7 +215,7 @@ export function UpdateCard({motion}){
         e.preventDefault();
         //console.log(umotion);
         try{
-            axios.put('https://jdsbackend.onrender.com/motions',umotion)
+            axios.put(`${currentServer}/motions`,umotion)
                 .then(()=>setUmotion({
                     motion:'',
                     infoslide:'',

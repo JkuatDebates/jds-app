@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { TagIcon, Calendar1Icon, Search} from 'lucide-react';
+import { currentServer } from './assets/urls';
 
 function Articles(){
     const [articles,setArticles]=useState([]);
@@ -14,7 +15,7 @@ function Articles(){
     useEffect(()=>{
         const fetchArticles=async ()=> {
             try{
-                const response= await axios.get('https://jdsbackend.onrender.com/articles');
+                const response= await axios.get(`${currentServer}/articles`);
                 setArticles(response.data);
                 setLoading(false);
             }

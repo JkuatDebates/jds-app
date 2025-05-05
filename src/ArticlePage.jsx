@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { TagIcon, Calendar1Icon} from 'lucide-react';
+import { currentServer } from "./assets/urls";
 
 function ArticlePage(){
     const {id}= useParams();
@@ -13,7 +14,7 @@ function ArticlePage(){
     useEffect(()=>{
             const fetchArticle=async ()=> {
                 try{
-                    const response= await axios.get('https://jdsbackend.onrender.com/articles');
+                    const response= await axios.get(`${currentServer}/articles`);
                     const res=response.data.find(a=> a._id===id);
                     //console.log(res);
                     setArticle(res);
