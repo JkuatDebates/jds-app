@@ -440,15 +440,20 @@ form h2{
     font-family: var(--primaryFont);
     justify-self: center;
 }
-form input,form select{
+form input,form select, form textarea{
     width: 80vw;
     max-width: 700px;
     display: block;
     margin-bottom: 1rem;
     border-radius: 1rem;
     padding: 8px;
+    box-sizing: border-box;
 }
 form input[type="radio"]{
+    display: inline;
+    width: auto;
+}
+form input[type="checkbox"]{
     display: inline;
     width: auto;
 }
