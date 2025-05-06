@@ -372,11 +372,11 @@ textarea{
     border-radius: 50px;
     display: flex;
     border: 1px solid;
-    padding: 5px;
-    margin-top: 10px;
+    margin-top: 1rem;
+    padding: 0.3rem;
     background-color: hsl(0, 0%, 80%);
 }
-.search:hover{
+.search:hover, .search:focus-within{
     box-shadow: 5px 5px 5px var(--accC);
 }
 .search input{
@@ -440,7 +440,7 @@ form h2{
     font-family: var(--primaryFont);
     justify-self: center;
 }
-form input,select{
+form input,form select{
     width: 80vw;
     max-width: 700px;
     display: block;
@@ -456,7 +456,7 @@ form label:hover{
     color: var(--accC);
     font-weight: bold;
 }
-form input:hover, input:focus, select:hover, select:focus{
+form input:hover,form input:focus,form select:hover,form select:focus{
     box-shadow: 5px 5px 3px var(--accC);
     outline: none;
 }

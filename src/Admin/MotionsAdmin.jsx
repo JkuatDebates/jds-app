@@ -1,6 +1,6 @@
-import { Search, XIcon } from "lucide-react"
+import { Search } from "lucide-react"
 import axios from "axios";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { currentServer } from "../assets/urls";
 
@@ -23,21 +23,29 @@ function MotionsAdmin(){
         source:''
     });
     const [isUpdate, setIsUpdate]=useState(false);
+    const [loading, setLoading]=useState(true);
+    const [creating, setCreating]=useState(false);
     const searchedMotionsRef=useRef([]);
     const searchRef=useRef(null);
     const motionTypesRef=useRef(null);
     const motionsRef=useRef([]);
-    const navigate=useNavigate();    
-
-    axios.get(`${currentServer}/motions`)
+    const navigate=useNavigate();
+    
+    const getMotions=async ()=>{
+        axios.get(`${currentServer}/motions`)
         .then(response=>{
             motionsRef.current=[];
             motionsRef.current=[...response.data];
             //console.log(response.data);
+            setLoading(false);
+            setDisplayedMotions([...motionsRef.current]);
         })
         .catch(err=>console.error(err));
         //.catch(()=>console.log('no mongo'));
-    
+    }
+    useEffect(()=>{
+        getMotions();
+    },[]);
 
     function renderMotions(b){
         if(motionsRef.current!=[]){
@@ -64,7 +72,7 @@ function MotionsAdmin(){
             case 0://motion type:'', search:''
                 motionTypesRef.current.value='';
                 searchRef.current.value='';
-                setDisplayedMotions([]);
+                setDisplayedMotions([...shuffle(motionsRef.current)]);
                 break;
             case 1://motion type:set, search:unset [type select]
                 filteredMotions=shuffle(motionsRef.current).filter((m)=>
@@ -121,6 +129,7 @@ function MotionsAdmin(){
                     theme:'',
                     source:''
             });
+            setCreating(false);
         }
         catch(err){
             console.log(err);
@@ -149,24 +158,41 @@ function MotionsAdmin(){
 
     return(
         <>
-               
-        <div className="textBlock">
-           <button onClick={()=>navigate('/admin')}>Admin Panel</button>
-            <h3>Add motion</h3>
-            <form onSubmit={submitMotion} style={{display:'flex', flexDirection:'column',gap:'0px'}}>
-                <p>Motion:<textarea value={newMotion.motion} name="motion" onChange={writeMotion}></textarea></p>
-                <p>Infoslide:<textarea value={newMotion.infoslide} name="infoslide"onChange={writeMotion}></textarea></p>
-                <p>Type:<select ref={motionTypesRef} value={newMotion.type} name="type"onChange={writeMotion}>
-                    {motionTypes.map((type, index)=>(
-                        <option key={index}>{type}</option>
-                        ))}
-                </select></p>
-                <p>Theme:<input type="text" value={newMotion.theme} name="theme"onChange={writeMotion}/></p>
-                <p>Source:<input type="text" value={newMotion.source} name="source"onChange={writeMotion}/></p>
+        <button onClick={()=>navigate('/admin')}>Admin Panel</button>
+        <button onClick={()=>setCreating(!creating)}>Add Motion</button>     
+        <section id="Create Motion">
+        {creating && 
+        <form onSubmit={submitMotion} style={{display:'flex', flexDirection:'column',gap:'0px'}}>
+            <h3 style={{textAlign: 'center'}}>Add motion</h3>
+            <p>Motion:<textarea value={newMotion.motion} name="motion" onChange={writeMotion} required></textarea></p>
+            <p>Infoslide:<textarea value={newMotion.infoslide} name="infoslide"onChange={writeMotion}></textarea></p>
+            <p>Type:<select ref={motionTypesRef} value={newMotion.type} name="type"onChange={writeMotion} required>
+                {motionTypes.map((type, index)=>(
+                    <option key={index}>{type}</option>
+                    ))}
+            </select></p>
+            <p>Theme:<input type="text" value={newMotion.theme} name="theme"onChange={writeMotion}/></p>
+            <p>Source:<input type="text" value={newMotion.source} name="source"onChange={writeMotion}/></p>
+            <div>
                 <button type="submit">Submit</button>
-            </form>
-        </div>
-        <div className="textBlock">
+                <button type="button" onClick={()=>{
+                    setNewMotion({
+                        motion:'',
+                        infoslide:'',
+                        type:'',
+                        theme:'',
+                        source:''
+                    });
+                    setCreating(false);
+                }}>Cancel</button>
+            </div>
+        </form>}
+        </section>
+        {isUpdate&&
+        <section id="updMotions" className="textBlock">
+            <UpdateCard motion={updatedMotion} setIsUpdate={setIsUpdate}/>
+        </section>}
+        <section id="Manage_Controls" className="textBlock">
             <h3>Manage Motions</h3>
             <p style={{display:'inline'}}>Select motion type: </p>
             <select ref={motionTypesRef} onChange={()=>renderMotions(1)}>
@@ -176,28 +202,25 @@ function MotionsAdmin(){
             </select> &nbsp;
             <div className="search">
                 <Search size={'1.2rem'} className="icon" onClick={()=>renderMotions(2)}/><input type="text" placeholder="Search motion"
-            ref={searchRef} onKeyDown={(e)=>e.key==='Enter'&& renderMotions(2)}/>
+            ref={searchRef} onChange={()=>renderMotions(2)}/>
             </div>
-        </div>
-        {isUpdate&&<div id="updMotions" className="textBlock">
-            <h3>Update Motion</h3>
-            <UpdateCard motion={updatedMotion}/>
-            <button onClick={()=>setIsUpdate(false)}><XIcon size={21}/></button>
-            </div>}        
-        <div>
+        </section>
+        {loading&& <p>loading...</p>}
+        {displayedMotions.length!==0 &&       
+        <section id="Render_Motions">
             <button onClick={()=>renderMotions(0)}>Refresh</button>
             <div>
                 {displayedMotions.map((e,i)=>(
                     <div key={i} className="motionCard">
                     {e.infoslide!==''&&<p>{e.infoslide}</p>}
                     <br />{e.motion}<br />
-                    <h6 style={{margin:'0.5rem'}}>{e.source? [e.source]: 'JDS'}</h6> 
+                    <h6 style={{margin:'0.5rem',textAlign:'center'}}>{e.source? [e.source]: 'JDS'}</h6> 
                     <br /><button onClick={()=>deleteMotion(e)}>Delete</button>
                     <button onClick={()=>updateMotion(e)}>Update</button>
                     </div>
                 ))}
             </div>
-        </div>
+        </section>}
         </>
     )
 }
@@ -205,7 +228,7 @@ function MotionsAdmin(){
 
 export default MotionsAdmin
 
-export function UpdateCard({motion}){
+export function UpdateCard({motion, setIsUpdate}){
     const [umotion,setUmotion]=useState({...motion});
 
     function writeMotion(e){
@@ -233,8 +256,9 @@ export function UpdateCard({motion}){
     return(
         <>
         <form onSubmit={submitUpdate}>
-        <p>Motion:<textarea type="text" value={umotion.motion} name="motion" onChange={writeMotion} style={{width:'90vw',minheight:'1rem'}}></textarea></p>
-                <p>Infoslide:<textarea value={umotion.infoslide} name="infoslide"onChange={writeMotion} style={{width:'90vw'}}></textarea></p>
+        <h3 style={{textAlign:'center'}}>Update Motion</h3>
+        <p>Motion:<textarea type="text" value={umotion.motion} name="motion" onChange={writeMotion} style={{width:'100%',minheight:'1rem'}}></textarea></p>
+                <p>Infoslide:<textarea value={umotion.infoslide} name="infoslide"onChange={writeMotion} style={{width:'100%'}}></textarea></p>
                 <p>Type:<select value={umotion.type} name="type"onChange={writeMotion}>
                     {motionTypes.map((type, index)=>(
                         <option key={index}>{type}</option>
@@ -243,6 +267,7 @@ export function UpdateCard({motion}){
                 <p>Theme:<input type="text" value={umotion.theme} name="theme"onChange={writeMotion}/></p>
                 <p>Source:<input type="text" value={umotion.source} name="source"onChange={writeMotion}/></p>
                 <button type="submit">Update</button>            
+                <button type="button" onClick={()=>setIsUpdate(false)} >Cancel</button>            
         </form>
         </>
     )
