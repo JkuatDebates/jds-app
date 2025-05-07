@@ -130,6 +130,8 @@ function MotionsAdmin(){
                     source:''
             });
             setCreating(false);
+            getMotions();
+            renderMotions(0);
         }
         catch(err){
             console.log(err);

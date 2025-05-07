@@ -1,88 +1,95 @@
-import { useState } from "react";
-import { FaLocationDot,FaClock, FaMoneyBillWave, FaCreditCard} from "react-icons/fa6";
-import {BsCalendar2DateFill} from "react-icons/bs";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { currentServer } from "./assets/urls";
 
-const today=new Date().toISOString().split('T')[0];
-const events=[
-    {
-        title: 'Mashujaa Opens XIV',
-        venue: 'Strathmore University',
-        venueLink:'',
-        date: '2025-04-13',
-        time:'8 AM EAT',
-        cost:'Ksh.200 per speaker',
-        registrationLink:'',
-        paymentDetails:"",
-        description:"14th edition of Strathmore University's signature debate tournament"
-    },
-    {
-        title: "Sadaqah Li Qaadiya 2025: Debate for Hope's Children's Home",
-        venue: 'DAK Discord(online)',
-        venueLink:'https://discord.com/invite/YRkBRpa4',
-        time:'8 AM EAT',
-        cost: "Ksh. 100 (100% donated to children's Home)",
-        date:'2025-05-01',
-        paymentDetails:"Paybill, Business No: 247247, Account No: *140923, Name: Unis Debate Kenya",
-        registrationLink:'https://forms.gle/hmkiKCrFXDE9d2Nt6',
-        description:"Online debate open no novice and opens speakersfor a charitable course"
-    },
-    {
-        title: "Illouwa III",
-        venue: 'TBA',
-        venueLink:'',
-        cost: "TBA",
-        time:'8 AM EAT',
-        date:'2025-10-04',
-        paymentDetails:"TBA",
-        registrationLink:'',
-        description:"3rd Edition of JKUAT'S very own debate tournament"
-    },
-];
+export default function Events(){
+    const [events, setEvents]=useState([]);
+    const [loading, setLoading]=useState(true);
+    const [dits, setDits]=useState(false);
+    const [details, setDetails]=useState([]);
+    const today=new Date().toISOString().split('T')[0];
 
-export const upcomingEvents=events.filter(e=>e.date>=today)
-        .sort((a,b)=>b.date.localeCompare(a.date));
-const pastEvents=events.filter(e=>e.date<=today)
-            .sort((a,b)=>b.date.localeCompare(a.date));
-function Events(){
-
-    function eventList(events){
-        return events.map((e,i)=>(<EventCard key={i} event={e}/>))
+    const getEvents=async ()=>{
+        try{
+            const response=await axios.get(`${currentServer}/events`);
+            if(response){
+                console.log(response.data);
+                setEvents(response.data);
+                setLoading(false);
+            }
+            else{
+                console.log('No response');
+            }
+        }
+        catch(err){
+            console.log(err);
+            console.log('Didnt get events');
+        }
     }
-    
+    useEffect(()=>{
+        getEvents();
+    }
+    ,[]);
+
+    function getDetails(e){
+        setDetails({...e});
+        setDits(true);
+        document.getElementById('eventDetails').scrollIntoView({behavior:'smooth'});
+    }
+    function dater(d){
+        const dArray= d.split('T',1)[0].split('-');
+        //return dArray.length;
+        return `${dArray[2]}-${dArray[1]}-${dArray[0]}`;
+    }
+
+
     return(
-        <div className="events">
-            <h1>JDS and Circuit Events</h1>
-            <div className="upcomingEvents">
-                <h3>Upcoming Events</h3>
-                {eventList(upcomingEvents)}
-            </div>
-            <div className="pastEvents">
-                <h3>Past Events</h3>
-                {eventList(pastEvents)}
-            </div>
+        <div style={{textAlign:"center",boxSizing:"border-box"}}>
+        <section id="upcomingEvents" className="textBlock">
+            <h4>Upcoming Events</h4>
+            {loading===false&& 
+            events.filter(e=>e.endDate>=today).sort((a,b)=>a.endDate.localeCompare(b.endDate)).map((e,i)=><ECard key={i} event={e} getDetails={getDetails}/>)}
+        </section>
+        <section id="pastEvents" className="textBlock">
+            <h4>Past Events</h4>
+            {loading===false&& 
+            events.filter(e=>e.endDate<today).sort((a,b)=>b.endDate.localeCompare(a.endDate)).map((e,i)=><ECard key={i} event={e} getDetails={getDetails}/>)}
+        </section>
+        <section id="eventDetails" className="textBlock">
+            {dits &&
+            <div  style={{backgroundColor:'white'}}>
+                <dt style={{backgroundColor:'hsl(213, 46%, 12%)', marginBottom:'0', color:'white', fontSize:'1.3rem', padding:'1rem', borderBottom:'1px solid white'}}>{details.title}</dt>
+                <dl className="eDetails">
+                    <dt>Level</dt><dd>{details.eventLevel}</dd>
+                    <dt>Type</dt><dd>{details.eventType}</dd>
+                    <dt>Venue</dt><dd>{details.venue} ({details.venueType})</dd>
+                    <dt>Dates</dt><dd>From {dater(details.startDate)} to {dater(details.endDate)}</dd>
+                    {details.judgeFee!==0 &&<><dt>Adjudicator Reg</dt><dd>Ksh.{details.judgeFee}</dd></>}
+                    {details.speakerFee!==0 &&<><dt>Speaker Reg</dt><dd>Ksh.{details.speakerFee}</dd></>}
+                    {details.observerFee!==0 &&<><dt>Observer Reg</dt><dd>Ksh.{details.observerFee}</dd></>}
+                    {details.speakerLink!='' &&<><dt>Speaker Link</dt><dd><a href={details.speakerLink} target="_blank">Click here</a></dd></>}
+                    {details.judgeLink!='' &&<><dt>Adjudicator Link</dt><dd><a href={details.judgeLink} target="_blank">Click here</a></dd></>}
+                    {details.observerLink!='' &&<><dt>Observer Link</dt><dd><a href={details.observerLink} target="_blank">Click here</a></dd></>}
+                    {details.paymentDetails!='' &&<><dt>Payment Details</dt><dd>{details.paymentDetails}</dd></>}
+                    {details.description!='' &&<><dt>Event Description</dt><dd>{details.description}</dd></>}
+                </dl>
+            </div>}
+            <button onClick={()=>{
+                document.getElementById('upcomingEvents').scrollIntoView({behavior:'smooth'})
+            }}>Back to Upcoming Events</button>
+        </section>
         </div>
+
     )
 }
-export function EventCard({event}){
-    const [details, setDetails]=useState(false);
-
+function ECard({event,getDetails}){
     return(
-        <div className="eventCard">
-            <div className="eventHeader" onClick={()=>setDetails(!details)}>
-                <h4><BsCalendar2DateFill size={20} className="icon2"/>({event.date}) {event.title}</h4>
-            </div>
-            
-            {details? <div className="eventDetails">
-                <p><strong>Desc:</strong>{event.description}</p>
-                <p><FaLocationDot size={20} className="icon2"/>{event.venueLink!==''?<a href={event.venueLink}>{event.venue}</a>:event.venue}</p>
-                <p><FaClock size={20} className="icon2"/>{event.time}</p>
-                <p><FaMoneyBillWave size={20} className="icon2"/>{event.cost}</p>
-                {event.paymentDetails!==''?<p><FaCreditCard size={20} className="icon2"/>{event.paymentDetails}</p>:''}
-                {event.registrationLink!==''?<p><a href={event.registrationLink} target="_blank" rel="noreferrer" style={{textDecoration:'none'}}>
-                    <button className="buttonOnBrand">Register Now</button></a></p>:''}
-                </div> :''}
-
+        <>
+        <div className="eCard">
+            <div className="posterFrame" ><img src={event.poster} alt={event.title} /></div>
+            <div ><h3 style={{margin:'0.6rem', display:'inline'}}>{event.title} 
+            <button className="buttonOnBrand" onClick={()=>getDetails(event)}>Details</button></h3></div>
         </div>
-    );
+        </>
+    )
 }
-export default Events

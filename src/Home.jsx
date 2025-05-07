@@ -3,7 +3,6 @@ import {Autoplay,Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import {Lectern ,Mic ,Trophy, Gavel, MessageCircle,Quote, Instagram,} from 'lucide-react';
 import { NavLink,Link} from "react-router-dom";
-import {upcomingEvents, EventCard} from './Events.jsx';
 
 function Home(){
     const slides=[
@@ -109,8 +108,6 @@ function Home(){
         </section>
         <section className='textBlock'>
             <h2>Check out upcoming events</h2>
-            Most Imminent Event:
-            <EventCard event={upcomingEvents[upcomingEvents.length-1]}/>
             <NavLink to='/events'><button className='buttonOnBrand'>Other Events</button></NavLink>
         </section>
     </>
