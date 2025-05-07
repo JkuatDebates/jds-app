@@ -63,7 +63,7 @@ export default function Events(){
                     <dt>Level</dt><dd>{details.eventLevel}</dd>
                     <dt>Type</dt><dd>{details.eventType}</dd>
                     <dt>Venue</dt><dd>{details.venue} ({details.venueType})</dd>
-                    {details.host!==''&& <><dt>Hosted by</dt><dd>{details.host}</dd></>}
+                    {details.host!==''&& details.host!==undefined && <><dt>Hosted by</dt><dd>{details.host}</dd></>}
                     <dt>Dates</dt><dd>From {dater(details.startDate)} to {dater(details.endDate)}</dd>
                     {(details.judgeFee!==0)&&(details.judgeFee!==null) &&<><dt>Adjudicator Reg</dt><dd>Ksh.{details.judgeFee}</dd></>}
                     {(details.speakerFee!==0)&&(details.speakerFee!==null) &&<><dt>Speaker Reg</dt><dd>Ksh.{details.speakerFee}</dd></>}
