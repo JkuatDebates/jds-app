@@ -63,10 +63,11 @@ export default function Events(){
                     <dt>Level</dt><dd>{details.eventLevel}</dd>
                     <dt>Type</dt><dd>{details.eventType}</dd>
                     <dt>Venue</dt><dd>{details.venue} ({details.venueType})</dd>
+                    {details.host!==''&& <><dt>Hosted by</dt><dd>{details.host}</dd></>}
                     <dt>Dates</dt><dd>From {dater(details.startDate)} to {dater(details.endDate)}</dd>
-                    {details.judgeFee!==0 &&<><dt>Adjudicator Reg</dt><dd>Ksh.{details.judgeFee}</dd></>}
-                    {details.speakerFee!==0 &&<><dt>Speaker Reg</dt><dd>Ksh.{details.speakerFee}</dd></>}
-                    {details.observerFee!==0 &&<><dt>Observer Reg</dt><dd>Ksh.{details.observerFee}</dd></>}
+                    {(details.judgeFee!==0)&&(details.judgeFee!==null) &&<><dt>Adjudicator Reg</dt><dd>Ksh.{details.judgeFee}</dd></>}
+                    {(details.speakerFee!==0)&&(details.speakerFee!==null) &&<><dt>Speaker Reg</dt><dd>Ksh.{details.speakerFee}</dd></>}
+                    {(details.observerFee!==0)&&(details.observerFee!==null) &&<><dt>Observer Reg</dt><dd>Ksh.{details.observerFee}</dd></>}
                     {details.speakerLink!='' &&<><dt>Speaker Link</dt><dd><a href={details.speakerLink} target="_blank">Click here</a></dd></>}
                     {details.judgeLink!='' &&<><dt>Adjudicator Link</dt><dd><a href={details.judgeLink} target="_blank">Click here</a></dd></>}
                     {details.observerLink!='' &&<><dt>Observer Link</dt><dd><a href={details.observerLink} target="_blank">Click here</a></dd></>}

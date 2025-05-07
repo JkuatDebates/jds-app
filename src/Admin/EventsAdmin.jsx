@@ -12,7 +12,7 @@ function EventsAdmin(){
     const [events,setEvents]=useState([]);
     const [displayed,setDisplayed]=useState([]);
     const eventLevels=['','University','High School','Grade School'];
-    const eventTypes=['','Public Speaking','BP Debate',"World's Debate","PS and BP", "PS and World's"];
+    const eventTypes=['','Public Speaking','BP Debate',"World's Debate","PS and BP", "PS and World's",'Club Event','Circuit Event'];
     const venueTypes=['','Online','Physical','Hybrid']
     const blankEvent=
         {
@@ -21,6 +21,7 @@ function EventsAdmin(){
             eventType:'',
             venue:'',
             venueType:'',
+            host:'',
             startDate: Date.now,
             endDate:Date.now,
             judgeFee:'',
@@ -81,6 +82,7 @@ function EventsAdmin(){
         formData.append('eventType',newEvent.eventType);
         formData.append('venue',newEvent.venue);
         formData.append('venueType',newEvent.venueType);
+        formData.append('host',newEvent.host);
         formData.append('startDate',newEvent.startDate);
         formData.append('endDate',newEvent.endDate);
         formData.append('judgeFee',newEvent.judgeFee);
@@ -136,6 +138,7 @@ function EventsAdmin(){
         formData.append('eventType',updateEvent.eventType);
         formData.append('venue',updateEvent.venue);
         formData.append('venueType',updateEvent.venueType);
+        formData.append('host',updateEvent.host);
         formData.append('startDate',updateEvent.startDate);
         formData.append('endDate',updateEvent.endDate);
         formData.append('judgeFee',updateEvent.judgeFee);
@@ -212,7 +215,8 @@ function EventsAdmin(){
             <select required name="venueType" onChange={newEventChange} value={newEvent.venueType}>
                 {venueTypes.map((l,i)=><option key={i}>{l}</option>)}
                 </select>
-            </label>
+            </label>            
+            <label>Hosted by<input type="text" name="host" onChange={newEventChange} value={newEvent.host}/></label>
             <label>Start Date<input type="date" name="startDate" onChange={newEventChange} value={newEvent.startDate}/></label>
             <label>End Date<input type="date" name="endDate" onChange={newEventChange} value={newEvent.endDate}/></label>
             <label>Adjudicator Registration Fee<input type="number" min={0} name="judgeFee" onChange={newEventChange} value={newEvent.judgeFee}/></label>
@@ -258,6 +262,7 @@ function EventsAdmin(){
                 {venueTypes.map((l,i)=><option key={i}>{l}</option>)}
                 </select>
             </label>
+            <label>Hosted by<input type="text" name="host" onChange={updateEventChange} value={updateEvent.host}/></label>
             <label>Start Date<input type="date" name="startDate" onChange={updateEventChange} value={updateEvent.startDate}/></label>
             <label>End Date<input type="date" name="endDate" onChange={updateEventChange} value={updateEvent.endDate}/></label>
             <label>Adjudicator Registration Fee<input type="number" min={0} name="judgeFee" onChange={updateEventChange} value={updateEvent.judgeFee}/></label>
