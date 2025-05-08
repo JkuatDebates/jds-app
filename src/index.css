@@ -3,7 +3,7 @@
     --pbrandC: hsl(213, 46%, 12%);
     --ftOnBG: hsl(0, 0%, 7%);
     --accC: hsl(166, 100%, 20%);
-    --padding: 2vw;
+    --padding: 0.8rem;
     --primaryFont: 'Verdana';
     --secoFont: 'Candara';
 }
@@ -15,7 +15,7 @@ button{
     background-color: var(--pbrandC);
     padding: var(--padding);
     border-radius: 5px;
-    font-family: var(--secoFont);
+    font-family: var(--primaryFont);
     cursor: pointer;
     border: none;
     margin: 3px;
@@ -23,11 +23,17 @@ button{
 button:hover{
     background-color: hsl(213, 46%, 22%);
 }
+button:disabled{
+    background-color:hsla(213, 46%, 12%, 0.6);
+}
 button:active{
     background-color: hsl(213, 46%, 32%);
 }
 .buttonOnBrand{
     background-color: var(--accC);
+}
+.buttonOnBrand:disabled{
+    background-color: hsla(166, 100%, 30%, 0.65);
 }
 .buttonOnBrand:hover{
    background-color:hsl(166, 100%, 30%);;
@@ -266,7 +272,7 @@ footer p{
     align-self: center;
     color: var(--bgC);
 }
-footer .navLink, a{
+footer .navLink,footer a, .navBar a{
     padding: 1vw;
     color: var(--bgC);
     text-decoration: none;
@@ -309,7 +315,7 @@ footer .navLink, a{
     flex-direction: column;
     text-align: center;
     color: var(--bgC);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     justify-self: center;
     width: 320px;
     margin: 0.5rem;
@@ -354,52 +360,8 @@ footer .navLink, a{
     max-height: 100%;
     object-fit: contain;
 }
-.timeline{
-    font-family: var(--primaryFont);
-}
-.upcomingEvents{
-    border-left: 10px solid var(--accC);
-    border-radius: 1rem;
-    border-top-left-radius:0;
-    border-bottom-left-radius:0;
-    background-color: hsl(0, 0%, 90%);
-    padding: var(--padding);
-    margin-bottom: 1rem;
-}
-.upcomingEvents h3,h4, strong{
-    color: var(--accC);
-    margin:0;
-}
-.pastEvents{
-    border-left: 10px solid var(--pbrandC);
-    border-radius: 1rem;
-    border-top-left-radius:0;
-    border-bottom-left-radius:0;
-    background-color:  hsl(0, 0%, 90%);
-    padding: var(--padding);
-}
-.pastEvents h3, h4, strong{
-    color: var(--pbrandC);
-    margin:0;}
 .icon2{
     fill: var(--accC);
-}
-.eventCard{
-    padding: 1rem;
-    border-bottom: 2px solid white;
-}
-.eventCard:hover{
-    box-shadow: 2px 2px 2px var(--accC), -2px -2px 2px var(--accC);
-    border-bottom: none;
-    border-radius: 1rem;
-}
-.eventDetails p{
-    display: flex;
-    align-items: start;
-    color: var(--pbrandC);
-}.eventDetails a{
-    text-decoration: none;
-    color: var(--accC);
 }
 .navBar .activeLink{
     border-bottom: 2px solid var(--accC);
@@ -519,4 +481,7 @@ form label:hover{
 form input:hover,form input:focus,form select:hover,form select:focus{
     box-shadow: 5px 5px 3px var(--accC);
     outline: none;
+}
+form p{
+    font-family: var(--secoFont);
 }

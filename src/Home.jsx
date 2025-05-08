@@ -108,7 +108,7 @@ function Home(){
         </section>
         <section className='textBlock'>
             <h2>Check out upcoming events</h2>
-            <NavLink to='/events'><button className='buttonOnBrand'>Other Events</button></NavLink>
+            <NavLink to='/events'><button className='buttonOnBrand'>Events</button></NavLink>
         </section>
     </>
         

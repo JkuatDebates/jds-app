@@ -15,6 +15,8 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink,Link} from 'react-router-dom';
 import { FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {Mail} from 'lucide-react';
+import Signup from './Signup.jsx';
+import Login from './Login.jsx';
 
 
 function App() {
@@ -51,9 +53,11 @@ function App() {
         <NavLink onClick={handleSidebar} to="/events" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Events</NavLink>
       </div>
       {sideBarOPen &&<div className='sideBarDrop' onClick={handleSidebar}></div>}
-      <main style={{minHeight:'50vh', margin:'8px'}}>
+      <main style={{minHeight:'60vh', margin:'8px'}}>
         <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/profiles" element={<Profiles />}/>
         <Route path="/motions" element={<Motions />} />
         <Route path="/articles" element={<Articles />} />
