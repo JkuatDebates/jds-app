@@ -152,10 +152,13 @@ label{
     font-family: var(--primaryFont);
     color: var(--bgC);
     display: flex;
-    align-items: center;
+    align-items:center;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 .logoImage{
     height: 15vw;
+    max-height: 150px;
     float: left;
     border-radius: 50%;
 }
@@ -164,15 +167,16 @@ label{
     padding: var(--padding);
 }
 .navBar p{
-    font-size: 4vw;
+    font-size: clamp(1rem,4vw,3rem);
     font-weight: bold;
 }
 .hamburger{
     font-size: 1.2rem;
     background: none;
     display: none;
-    margin-left: 20vw;
-    margin-right: 0vw;
+    position: absolute;
+    margin: none;
+    right: 1rem;
 }
 .sideBarDrop{
     position: fixed;
@@ -273,7 +277,7 @@ footer p{
     color: var(--bgC);
 }
 footer .navLink,footer a, .navBar a{
-    padding: 1vw;
+    padding-left: 1rem;
     color: var(--bgC);
     text-decoration: none;
     display: flex;
@@ -293,20 +297,6 @@ footer .navLink,footer a, .navBar a{
 }
 .whatsapp:hover{
     fill: green;
-}
-@media(max-width: 550px){
-    .navLinks{
-        display: none;
-    }
-    .hamburger{
-        display: block;
-    }
-    .profileCard{
-        flex-direction: column;
-    }
-    .debatorName{
-        text-align: center;
-    }
 }
 .eCard{
     box-sizing: border-box;
@@ -372,6 +362,74 @@ footer .navLink,footer a, .navBar a{
     background-color: var(--accC); 
     border-radius: 1rem;
     font-weight: bold;   
+}
+.sidebarClosed .dp2, .sidebarClosed p{
+    display: none;
+}
+.sidebarOpen p{
+    text-align: center;
+    margin-top: 0;
+}
+.myProfile{
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:clamp(250px, 70vw, 400px);
+    justify-self: center;
+    /* background-color: var(--pbrandC); */
+    background: radial-gradient(circle, var(--pbrandC),black);
+    color: white;
+    gap: 0;
+    padding: 1rem;
+}
+.myProfile p{
+    margin-top: 0;
+}
+.dpdiv{
+    width: clamp(100px, 40vw, 320px);
+    height: clamp(100px, 40vw, 320px);
+    margin-bottom: 1rem;
+    background-color: var(--accC);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: var(--secoFont);
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1rem;
+    gap:0;
+    margin-top: 1rem;
+}
+.profile .dp{
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accC);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: var(--secoFont);
+}
+.profile p{
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
 }
 textarea{
     border-radius: 1rem;
@@ -484,4 +542,37 @@ form input:hover,form input:focus,form select:hover,form select:focus{
 }
 form p{
     font-family: var(--secoFont);
+}
+@media(max-width: 550px){
+    .navLinks{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .profileCard{
+        flex-direction: column;
+    }
+    .debatorName{
+        text-align: center;
+    }
+    .profile{
+        display: none;
+    }
+    .dp2{
+        box-sizing: border-box;
+        width: 60px;
+        height: 60px;
+        background-color: var(--accC);
+        border-radius: 50%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: var(--secoFont);
+        position: relative;
+        align-self: center;
+    }
 }

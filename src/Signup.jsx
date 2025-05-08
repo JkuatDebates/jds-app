@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { currentServer } from "./assets/urls";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup(){
     const [newUser, setNewUser]=useState({username:'', password:'', email:''});
@@ -9,6 +9,7 @@ export default function Signup(){
     const [success, setSuccess]=useState(false);
     const [errorMessage, setErrorMessage]=useState('Something Went Wrong!');
     const [loading, setLoading]=useState(false);
+    const navigate=useNavigate();
 
     function formChange(e){
         setError(false);
@@ -29,6 +30,7 @@ export default function Signup(){
             }
             setError(false);
             setSuccess(true);
+            navigate('/login');
         }
         catch(err){
             console.log(err);

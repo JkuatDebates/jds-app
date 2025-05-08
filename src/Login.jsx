@@ -1,36 +1,43 @@
 import axios from "axios";
 import { useState } from "react";
 import { currentServer } from "./assets/urls";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signInSuccess, signInFailure, signInStart } from "./redux/user/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { jwtDecode } from "jwt-decode";
 
 export default function Login(){
     const [user, setUser]=useState({password:'', email:''});
-    const [error, setError]=useState(false);
+    const {loading, error}=useSelector((state)=>state.user);
+    //replaces const [error, setError]=useState(false) and const [loading, setLoading]=useState(false);
     const [errorMessage, setErrorMessage]=useState('Wrong Credentials');
     const [success, setSuccess]=useState(false);
-    const [loading, setLoading]=useState(false);
+    const navigate=useNavigate();
+    const dispatch=useDispatch();
 
     function formChange(e){
-        setError(false);
+        dispatch(signInFailure())//replaces setError(false);
         setSuccess(false);
         setUser({...user, [e.target.name]:e.target.value});
     }
     async function submitLogIn(e){
         e.preventDefault();
-        setLoading(true);
+        dispatch(signInStart());//replaces setLoading(true);
         try{
             const res=await axios.post(`${currentServer}/user/login`,user);
-            console.log(res);
-            setLoading(false);
-            setError(false);
+            localStorage.setItem('token',res.data.token);
+            const userToken= jwtDecode(res.data.token);
+            console.log(userToken);//contains userInfo object and token expiry details
+            //console.log(userToken.userInfo);
+            dispatch(signInSuccess(userToken.userInfo));//replaces  setLoading(false);
+            dispatch(signInFailure())//replaces setError(false);
             setSuccess(true);
+            navigate('/');
         }
         catch(err){
-            console.log(err);
-            setLoading(false);
-            if(err.status==404) setErrorMessage('Email not registered');
-            else setErrorMessage('Wrong Credentials');
-            setError(true);
+            //console.log(err);
+            dispatch(signInFailure(err));//replaces setLoading(false); and setError(true);
+            setErrorMessage(err.response.data.message);
         }
     }
     return(
