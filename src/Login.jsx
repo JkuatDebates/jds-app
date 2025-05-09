@@ -27,7 +27,7 @@ export default function Login(){
             const res=await axios.post(`${currentServer}/user/login`,user);
             localStorage.setItem('token',res.data.token);
             const userToken= jwtDecode(res.data.token);
-            console.log(userToken);//contains userInfo object and token expiry details
+            //console.log(userToken);//contains userInfo object and token expiry details
             //console.log(userToken.userInfo);
             dispatch(signInSuccess(userToken.userInfo));//replaces  setLoading(false);
             dispatch(signInFailure())//replaces setError(false);

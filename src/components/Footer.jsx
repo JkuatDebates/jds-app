@@ -1,9 +1,11 @@
 import { FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {Mail} from 'lucide-react';
 import {NavLink,Link} from 'react-router-dom';
+import { useSelector } from "react-redux";
 
 
 export default function Footer(){
+  const {currentUser}=useSelector((state)=>state.user);
     return(
         <>
         <footer>
@@ -15,7 +17,8 @@ export default function Footer(){
         <li><NavLink to="/motions" className='navLink'>Motions</NavLink></li>
         <li><NavLink to="/articles" className='navLink'>Articles</NavLink></li>
         <li><NavLink to="/tools" className='navLink'>Tools</NavLink></li>
-        <li><NavLink to="/events" className='navLink'>Events</NavLink></li>          
+        <li><NavLink to="/events" className='navLink'>Events</NavLink></li>
+        {(currentUser && (currentUser.role==='admin'||currentUser.role==='editor')) && <li><NavLink to="/admin" className='navLink'>Admin</NavLink></li>}          
         </ul>
       </div>
       <div style={{borderTop:'1px solid', display:'flex', justifyContent:'center',gap:'3vw'}}>

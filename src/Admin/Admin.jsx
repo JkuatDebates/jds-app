@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom"
+import { useSelector } from "react-redux";
 
 function Admin(){
     const navigate=useNavigate();
+    const {currentUser}= useSelector((state)=>state.user);
 
     return(
         <>
@@ -46,6 +48,14 @@ function Admin(){
                     <button className="buttonOnBrand" onClick={()=>navigate('/admin/articles')}>Go</button>
                 </ul>
             </div>
+            {currentUser.role=='admin' &&<div className="adminCard">
+                <h3>Users</h3>
+                <ul>
+                    <li>Manage User Roles</li>
+                    <li>Manage Account Recovery</li>
+                    <button className="buttonOnBrand" onClick={()=>navigate('/admin/users')}>Go</button>
+                </ul>
+            </div>}
         </div>
         </div>
         </>

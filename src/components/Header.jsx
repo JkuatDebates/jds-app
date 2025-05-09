@@ -41,7 +41,7 @@ export default function  Header(){
         <NavLink to="/articles" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Articles</NavLink>
         <NavLink to="/tools" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Tools</NavLink>
         <NavLink to="/events" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Events</NavLink>
-        {(currentUser && currentUser.role==='admin') && <NavLink to="/admin" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Admin</NavLink>}
+        {(currentUser && (currentUser.role==='admin'||currentUser.role==='editor')) && <NavLink to="/admin" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Admin</NavLink>}
         </div>
       </nav>
       <div className={sideBarOPen? 'sidebarOpen':'sidebarClosed'}>
@@ -52,7 +52,7 @@ export default function  Header(){
         <NavLink onClick={handleSidebar} to="/articles" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Articles</NavLink>
         <NavLink onClick={handleSidebar} to="/tools" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Tools</NavLink>
         <NavLink onClick={handleSidebar} to="/events" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Events</NavLink>
-        {(currentUser && currentUser.role==='admin') && <NavLink onClick={handleSidebar} to="/admin" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Admin</NavLink>}
+        {(currentUser && (currentUser.role==='admin'|| currentUser.role==='editor')) && <NavLink onClick={handleSidebar} to="/admin" className={({isActive})=>isActive?'navLink activeLink':'navLink'}>Admin</NavLink>}
       </div>
       {sideBarOPen &&<div className='sideBarDrop' onClick={handleSidebar}></div>}
         </>

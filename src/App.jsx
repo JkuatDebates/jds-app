@@ -21,7 +21,7 @@ import { jwtDecode } from "jwt-decode";
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ProtectedRoutes from './components/ProtectedRoute.jsx';
-import Users from './Users.jsx';
+import Users from './Admin/Users.jsx';
 
 
 function App() {

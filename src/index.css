@@ -43,7 +43,8 @@ button:active{
 }
 .textBlock, .motionCard,li,.testimonials, .testimonialsSection{
     background-color: hsl(0, 0%, 90%);
-    padding: var(--padding);
+    padding: 0.5rem;
+    padding-top: var(--padding);
     font-family: var(--primaryFont);
     border-radius: 1rem;
     margin-top: 0.3rem;
@@ -511,7 +512,7 @@ form{
     padding: 1rem;
     border-radius: 1rem;
 }
-form h2{
+form h2, h3{
     font-family: var(--primaryFont);
     justify-self: center;
 }
@@ -542,6 +543,27 @@ form input:hover,form input:focus,form select:hover,form select:focus{
 }
 form p{
     font-family: var(--secoFont);
+}
+.userTable{
+    width: 90%;
+    color: white;
+    text-align: center;
+    justify-self: center;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.userTable thead{
+    background-color: var(--accC);
+}
+.userTable .c1, .userTable th{
+    background-color: var(--accC);
+    padding: 0.5rem;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+.userTable td{
+    background-color: var(--pbrandC);
+    padding: 1rem;
 }
 @media(max-width: 550px){
     .navLinks{
