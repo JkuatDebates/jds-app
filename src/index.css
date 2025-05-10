@@ -561,19 +561,7 @@ form p{
     border-bottom: 1px solid white;
     border-left: 1px solid white;
 }
-.userTable .c1{
-    width: 20vw;
-    max-width: 100px;
-    overflow: hidden;
-}
 .userTable .c2{
-    width: 60vw;
-    max-width: 300px;
-    overflow: hidden;
-}
-.userTable .c3{
-    width: 20vw;
-    max-width: 100px;
     overflow: hidden;
 }
 .userTable td{
@@ -612,4 +600,7 @@ form p{
         position: relative;
         align-self: center;
     }
+    .c2{
+        max-width: 60vw;
+        }
 }
