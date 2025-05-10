@@ -91,6 +91,7 @@ export default function Users(){
             console.log(err);
             setServing(false);
             setError(true);
+            setErrorMessage(err.message);
         }
     }
 
@@ -137,9 +138,9 @@ export default function Users(){
             <table className="userTable">
             <thead>
             <tr >
-                <th>Username</th>
-                <th>Email</th>
-                <th> Role</th>
+                <th className="c1">Username</th>
+                <th className="c2">Email</th>
+                <th className="c3"> Role</th>
             </tr>
             </thead>
             <tbody>
@@ -153,8 +154,8 @@ export default function Users(){
                 //console.log(u);
             }}>
                 <td className="c1">{u.username}</td>
-                <td>{u.email}</td>
-                <td>{u.role}</td>
+                <td className="c2">{u.email}</td>
+                <td className="c3">{u.role}</td>
             </tr>)
             }
             </tbody></table>}

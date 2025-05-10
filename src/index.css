@@ -545,7 +545,6 @@ form p{
     font-family: var(--secoFont);
 }
 .userTable{
-    width: 90%;
     color: white;
     text-align: center;
     justify-self: center;
@@ -557,13 +556,29 @@ form p{
 }
 .userTable .c1, .userTable th{
     background-color: var(--accC);
-    padding: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid white;
     border-left: 1px solid white;
 }
+.userTable .c1{
+    width: 20vw;
+    max-width: 100px;
+    overflow: hidden;
+}
+.userTable .c2{
+    width: 60vw;
+    max-width: 300px;
+    overflow: hidden;
+}
+.userTable .c3{
+    width: 20vw;
+    max-width: 100px;
+    overflow: hidden;
+}
 .userTable td{
     background-color: var(--pbrandC);
-    padding: 1rem;
+    padding: 1vw;
 }
 @media(max-width: 550px){
     .navLinks{

@@ -10,7 +10,7 @@ export default function Login(){
     const [user, setUser]=useState({password:'', email:''});
     const {loading, error}=useSelector((state)=>state.user);
     //replaces const [error, setError]=useState(false) and const [loading, setLoading]=useState(false);
-    const [errorMessage, setErrorMessage]=useState('Wrong Credentials');
+    const [errorMessage, setErrorMessage]=useState('Something Went Wrong');
     const [success, setSuccess]=useState(false);
     const navigate=useNavigate();
     const dispatch=useDispatch();
