@@ -8,7 +8,7 @@ function Admin(){
     return(
         <>
         <div className="textBlock" style={{textAlign:'center', padding:'5px'}}>
-            <h2>Welcome Administrator</h2>
+            <h2>Welcome {currentUser.username}</h2>
             <h4>What would you like to manage today</h4>
         
         

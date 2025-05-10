@@ -340,6 +340,7 @@ function ProfilesAdmin(){
             <Search onClick={search} className="icon"/>
             <input type="text" ref={searchRef} placeholder="Search for a profile" onChange={search}/>
         </div>
+        <div>
         {displayed&& displayed.map((p,i)=>
         <div key={i} style={{display:'flex',flexDirection:"row", alignItems:'center'}}>
             <img src={p.photo} alt={`${p.name} image`} style={{width:'50px', borderRadius:'5px'}}/><div style={{flexGrow:'1',marginLeft:'1rem'}}><strong >{p.name} </strong>
@@ -354,7 +355,7 @@ function ProfilesAdmin(){
                 }}>Update </button>
             <button type="button" onClick={()=>deleteProfile(p)}>Delete </button></>}
         </div>
-        )}
+        )}</div>
     </div>}
     </section>
     

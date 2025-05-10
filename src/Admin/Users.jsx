@@ -134,18 +134,10 @@ export default function Users(){
             </form>}
         </section>
         <section id='display'>
-            {loading? <p>loading...</p>:
-            <table className="userTable">
-            <thead>
-            <tr >
-                <th className="c1">Username</th>
-                <th className="c2">Email</th>
-                <th className="c3"> Role</th>
-            </tr>
-            </thead>
-            <tbody>
+            {loading? <p>loading...</p>:<>
+            
             {users.length!==0 && display.map((u,i)=>
-            <tr key={i} onClick={()=>{
+            <div key={i} className="userDiv" onClick={()=>{
                 setNewCreds({...u});
                 setUpdating(true);
                 setError(false);
@@ -153,12 +145,15 @@ export default function Users(){
                 document.getElementById('update').scrollIntoView({behavior:'smooth'});
                 //console.log(u);
             }}>
-                <td className="c1">{u.username}</td>
-                <td className="c2">{u.email}</td>
-                <td className="c3">{u.role}</td>
-            </tr>)
-            }
-            </tbody></table>}
+                <div className='userIcon' >{u.username.charAt(0)}</div>
+                <div>
+                    <h3>{u.username}</h3>
+                    <strong>{u.role}</strong>
+                    <p>{u.email}</p>
+                </div>
+                
+            </div>)}
+            </>}
         </section>
         </>
     )
