@@ -132,6 +132,7 @@ function Motions(){
         if(currentUser){
             //console.log(e, vote);
             try{
+                optimisticUpdate(e,vote);
                 await axios.post(`${currentServer}/motions/vote`,{email:currentUser.email, vote:vote, id:e._id});
                 //console.log(res);
                 getMotions();
@@ -143,6 +144,29 @@ function Motions(){
         else{
             navigate('/login');
         }
+        
+    }
+    function optimisticUpdate(e,vote){
+        const votedIndex=e.votes.findIndex(m=>m.email===currentUser.email);
+        if(votedIndex!==-1){
+            if(!e.votes[votedIndex].voteType){
+                e.votes[votedIndex]={...e.votes[votedIndex],voteType:''};
+            }
+            if(e.votes[votedIndex].voteType===vote){
+                e.votes.splice(votedIndex,1);
+            }
+            else{
+                e.votes[votedIndex].voteType=vote;
+            }
+        }
+        else{
+            e.votes.push({email:currentUser.email, voteType:vote});
+        }
+        const updated=[...displayedMotions];
+        const motionIndex=updated.findIndex(m=>m._id===e._id);
+        //console.log(motionIndex);
+        updated.splice(motionIndex,1,e);
+        setDisplayedMotions(updated);
         
     }
 
