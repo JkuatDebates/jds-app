@@ -50,7 +50,7 @@ function Motions(){
                 setDisplayedMotions([...motionsRef.current]);
                 break;
             case (filter!==''&& search==='')://motion type:set, search:unset [type select]
-                filteredMotions=shuffle(motionsRef.current).filter((m)=>
+                filteredMotions=motionsRef.current.filter((m)=>
                     m.type===motionTypesRef.current.value);
                 filteredMotions.length!==0?
                 setDisplayedMotions(filteredMotions):
@@ -98,14 +98,6 @@ function Motions(){
         } 
     }
 
-    function shuffle(array){
-        const shuffledArray=[...array];
-        for(let i=shuffledArray.length-1;i>0;i--){
-            const random=Math.floor(Math.random()*(i+1));
-            [shuffledArray[i],shuffledArray[random]]=[shuffledArray[random],shuffledArray[i]];
-        }
-        return shuffledArray;
-    }
     function voteDisplay(e){
         if(e.motion!=='No motion to display'){
         if(currentUser){

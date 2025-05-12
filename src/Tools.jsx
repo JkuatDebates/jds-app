@@ -1,20 +1,24 @@
-import DBKeeper from './DBKeeper/DBKeeper.jsx';
-import DBteams from './DBteams/DBteams.jsx'
+import DBKeeper from './components/DBKeeper/DBKeeper.jsx';
+import DBteams from './components/DBteams/DBteams.jsx'
+import PSKeeper from './components/PSKeeper.jsx';
 import { useState } from "react";
 
 function Tools(){
     const [tool, setTool]=useState('');
+    const tools=['Debate Keeper','Teamer','PS Keeper']
 
-    function toolSelect(tl){
-       // console.log(tl);
-        setTool(tl);
+    function changeTool(e){
+        setTool(e.target.value);
     }
+
     function renderTool(){
         switch(tool){
-            case 'DK':
+            case 'Debate Keeper':
                 return <DBKeeper/>
-            case 'DT':
+            case 'Teamer':
                 return <DBteams/>
+            case 'PS Keeper':
+                return <PSKeeper/>
         }
     }
 
@@ -22,13 +26,10 @@ function Tools(){
         <div>
             <div className='textBlock'>
                 <h2>Pick tool</h2>
-                <label htmlFor="Teamer">
-                    <input type="radio" name="tools" id="Teamer" 
-                    onChange={()=>toolSelect('DT')}/>Teamer</label><br />
-                
-                <label htmlFor="Keeper">
-                    <input type="radio" name="tools" id="Keeper" 
-                    onChange={()=>toolSelect('DK')}/>Debate Keeper</label>
+                <select onChange={changeTool}>
+                    {tools.map((t,i)=>
+                    <option key={i} value={t}>{t}</option>)}
+                </select>
             </div>
             <div>
                 {renderTool()}

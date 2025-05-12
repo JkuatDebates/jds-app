@@ -15,7 +15,7 @@ span{
 }
 select, input{
     background-color:var(--inputBC);
-    width: 20vw;
+    min-width: 20vw;
     border-radius: 3px;
 }
 

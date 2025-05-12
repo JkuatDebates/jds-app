@@ -1,5 +1,5 @@
 import React,{useRef, useState} from "react";
-import styles from './/DBteams.module.css';
+import styles from './DBteams.module.css';
 
 function DBteams(){
     const [debaters,setDebaters]=useState([]);
