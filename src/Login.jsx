@@ -28,11 +28,11 @@ export default function Login(){
             localStorage.setItem('token',res.data.token);
             const userToken= jwtDecode(res.data.token);
             //console.log(userToken);//contains userInfo object and token expiry details
-            //console.log(userToken.userInfo);
+            console.log(userToken.userInfo);
             dispatch(signInSuccess(userToken.userInfo));//replaces  setLoading(false);
             dispatch(signInFailure())//replaces setError(false);
             setSuccess(true);
-            navigate('/');
+            navigate(-1);
         }
         catch(err){
             //console.log(err);
