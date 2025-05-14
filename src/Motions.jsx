@@ -127,7 +127,7 @@ function Motions(){
                 optimisticUpdate(e,vote);
                 await axios.post(`${currentServer}/motions/vote`,{email:currentUser.email, vote:vote, id:e._id});
                 //console.log(res);
-                getMotions();
+                //getMotions();
             }    
             catch(err){
                 console.log(err);

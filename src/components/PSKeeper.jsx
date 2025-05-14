@@ -62,12 +62,13 @@ export default function PSKeeper(){
         })        
     }
     function background(t){
+        if(backgroundRef.current){
         if(Number(t)>=dur){
             backgroundRef.current.style.backgroundColor='red';
         }
         else{
             backgroundRef.current.style.backgroundColor='blue';
-        }
+        }}
     }
     return(
     <div  style={{display:'flex',alignItems:"center", flexDirection:'column'}}>

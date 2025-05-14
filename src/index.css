@@ -36,12 +36,12 @@ button:active{
     background-color: hsla(166, 100%, 30%, 0.65);
 }
 .buttonOnBrand:hover{
-   background-color:hsl(166, 100%, 30%);;
+   background-color:hsl(166, 100%, 30%);
 }
 .buttonOnBrand:active{
-   background-color:hsl(166, 100%, 40%);;
+   background-color:hsl(166, 100%, 40%);
 }
-.textBlock, .motionCard,li,.testimonials, .testimonialsSection{
+.textBlock, .motionCard,.textBlock li,.testimonials, .testimonialsSection{
     background-color: hsl(0, 0%, 90%);
     padding: 0.5rem;
     padding-top: var(--padding);
@@ -571,6 +571,14 @@ form p{
     font-size: 2rem;
     font-family: var(--secoFont);
     margin: 0.5rem;
+}
+.articlePreview{
+    background-color: white;
+    width: 90vw;
+    text-align: left;
+}
+.articlePreview li{
+    font-family: var(--primaryFont);
 }
 @media(max-width: 550px){
     .navLinks{
