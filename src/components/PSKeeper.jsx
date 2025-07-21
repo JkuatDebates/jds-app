@@ -1,6 +1,6 @@
 import React,{useState, useEffect, useRef} from "react";
 import bellSound from '/bell.mp3';
-import { Bell, BellIcon, BellRing, Minus, PauseIcon, PlayIcon, PlusIcon, StopCircleIcon, TimerResetIcon, VolumeOffIcon } from "lucide-react";
+import { BellMinus, BellRing, Minus, PauseIcon, PlayIcon, PlusIcon, TimerResetIcon} from "lucide-react";
 
 
 export default function PSKeeper(){
@@ -16,11 +16,9 @@ export default function PSKeeper(){
     const secRef=useRef(null);
     const setminRef=useRef(null);
     const setsecRef=useRef(null);
-    const intRef=useRef(null);
-    const toRef=useRef(null);
+    const ringing=useRef(true);
     const lastring=useRef(null);
     const backgroundRef=useRef(null);
-    let stopbellint;
 
     useEffect(()=>{
             if(isRunning){
@@ -49,7 +47,7 @@ export default function PSKeeper(){
         else return num;
     }
     function Pause(){
-        nobell();
+        if(isRunning==true) ringing.current=false;
         setIsRunning(!isRunning);
         startTimeRef.current=Date.now()-elapsedTime;
     }
@@ -72,16 +70,19 @@ export default function PSKeeper(){
             if(time===t[0]) 
                 {
                     lastring.current=time;
-                    bellRef.current.play();
-                    intRef.current=setInterval(()=>bellRef.current.play(),1000);
-                    stopbellint=intRef.current;
-                    toRef.current=setTimeout(()=>nobell(),(t[1]-1)*1000);
+                    ring(t[1]);
                 }
         });        
     }
-    function nobell(){
-        clearInterval(stopbellint);
+    function ring(n){
+        let r=n;
+        if(r<1 || ringing.current==false) return;
+        bellRef.current.play();
+        r--;
+        ringing.current=true;
+        setTimeout(()=>ring(r),1000);
     }
+
     function background(t){
         if(backgroundRef.current){
         if(Number(t)>=dur){
@@ -121,13 +122,13 @@ export default function PSKeeper(){
             <div style={{width:'70vw', maxWidth:'500px', height:'70vw', maxHeight:'500px', backgroundColor:'blue',margin:'1rem', display:'flex',flexDirection:'column',alignItems:"center", justifyContent:'center'}}ref={backgroundRef}>
                 <h3 style={{fontSize:'clamp(1rem,20vw,170px)', fontFamily:'monospace',boxSizing:'border-box',color:"white"}}>{updateTime()}</h3>
                 {!isRunning&&
-                <div>
+                <div style={{display:'inherit'}}>
                     <strong style={{color: 'white'}}>Set Time</strong>
-                    <input  type="number" min={0} ref={setminRef} onChange={setTime} style={{width:'1rem'}}/>
-                    <input type="number" min={0} ref={setsecRef} onChange={setTime} style={{width:'1rem'}}/>
+                    <input  type="number" min={0} placeholder="min" ref={setminRef} onChange={setTime} style={{width:'3rem',minWidth:'0'}}/>
+                    <input type="number" min={0} placeholder="sec" ref={setsecRef} onChange={setTime} style={{width:'3rem',minWidth:'0'}}/>
                 </div>
                 }
-                
+                <br />
             </div>
             <div style={{margin:'0.5rem'}}>
                 <button className="buttonOnBrand" onClick={Pause}>{isRunning?<PauseIcon size={20}/>:<PlayIcon size={20}/>}</button>
@@ -135,12 +136,13 @@ export default function PSKeeper(){
                     setIsRunning(false);
                     setElapsedTime(0);
                     lastring.current=null;
+                    ringing.current=true;
                 }}><TimerResetIcon size={20}/></button>
                 <button className="buttonOnBrand" onClick={()=>{
-                bellRef.current.play();
+                ring(1);
                 }}><BellRing size={20}/></button>
+            </div> 
                 
-            </div>     
         </div>
     </div>);
 }
