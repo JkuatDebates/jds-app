@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function Tools(){
     const [tool, setTool]=useState('');
-    const tools=['Debate Keeper','Teamer','PS Keeper']
+    const tools=['','Debate Keeper','Teamer','PS Keeper']
 
     function changeTool(e){
         setTool(e.target.value);
