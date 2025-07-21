@@ -100,11 +100,11 @@ export default function PSKeeper(){
     return(
     <div  style={{display:'flex',alignItems:"center", flexDirection:'column'}}>
         <div>
-            <label style={{display:"flex", alignItems:'center'}}>Ring Times 
+            <label style={{display:"flex", alignItems:'center'}}>Ring Time 
                 <input type="Number" placeholder="Min" ref={minRef} style={{width:'1rem'}} min={0} max={59}/>
                 <input type="Number" placeholder="Sec" ref={secRef} style={{width:'1rem'}} min={0} max={59}/></label>
                 <label style={{display:"flex", alignItems:'center'}}>
-                    Ring Number
+                    Ring Iteration
                     <input type="Number" placeholder="Repeats" ref={repRef} style={{width:'1rem'}} min={0} defaultValue={1}/>
                     <PlusIcon style={{color:'white',borderRadius:"0.5rem", marginLeft:'0.4rem', padding:'0.1rem'}} className="buttonOnBrand" onClick={addRingTime}/>
                 </label>            
