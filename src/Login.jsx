@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { currentServer } from "./assets/urls";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { signInSuccess, signInFailure, signInStart } from "./redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { jwtDecode } from "jwt-decode";
@@ -14,6 +14,7 @@ export default function Login(){
     const [success, setSuccess]=useState(false);
     const navigate=useNavigate();
     const dispatch=useDispatch();
+    const location=useLocation();
 
     function formChange(e){
         dispatch(signInFailure())//replaces setError(false);
@@ -32,7 +33,7 @@ export default function Login(){
             dispatch(signInSuccess(userToken.userInfo));//replaces  setLoading(false);
             dispatch(signInFailure())//replaces setError(false);
             setSuccess(true);
-            navigate(-1);
+            navigate('/');
         }
         catch(err){
             //console.log(err);

@@ -50,8 +50,8 @@ function Home(){
         className="mySwiper">{slides.map((slide,index)=>(
             <SwiperSlide key={index}>
                 <div className="slide">
-                    <img src={slide.image} alt={`Slide ${index}`}/>
                     <div className="caption">{slide.text}</div>
+                    <img src={slide.image} alt={`Slide ${index}`}/>
                 </div>
             </SwiperSlide>
         ))}</Swiper>
