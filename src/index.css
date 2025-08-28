@@ -586,6 +586,7 @@ form p{
     }
     .slide img{
         height: 50vh;
+        object-fit: cover;
     }
     .caption{
     font-size: 1rem;
