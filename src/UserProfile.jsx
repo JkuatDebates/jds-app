@@ -4,6 +4,7 @@ import { currentServer } from "./assets/urls";
 import { useNavigate } from "react-router-dom";
 import { logOut } from "./redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { googleLogout } from "@react-oauth/google";
 
 export default function UserProfile(){
     const {currentUser}= useSelector((state)=>state.user);
@@ -24,7 +25,8 @@ export default function UserProfile(){
         const token=localStorage.getItem('token');
         if(token) localStorage.removeItem('token');
         dispatch(logOut());
-        navigate('/login');        
+        navigate('/login'); 
+        googleLogout();       
     }
     function passwordOnChange(e){
         setError(false);
