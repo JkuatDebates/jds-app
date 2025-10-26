@@ -12,8 +12,10 @@ export default function UserProfile(){
     const dispatch=useDispatch();
     const [newPwd, setNewPwd]=useState({entry1:'',entry2:''});
     const [newUsn, setNewUsn]=useState('');
+    const [newTst, setNewTst]=useState('');
     const [usnChange, setUsnChange]=useState(false);
     const [pwdChange, setPwdChange]=useState(false);
+    const [tstChange, setTstChange]=useState(false);
     const [deleting, setDeleting]=useState(false);
     const [error, setError]=useState(false);
     const [success, setSuccess]=useState(false);
@@ -27,6 +29,30 @@ export default function UserProfile(){
         dispatch(logOut());
         navigate('/login'); 
         googleLogout();       
+    }
+    function tstOnChange(e){
+        setError(false);
+        setSuccess(false);
+        setLoading(false);
+        setNewTst(e.target.value);
+    }
+    async function tstOnSubmit(e){
+        e.preventDefault();
+        setLoading(true);
+        setSuccess(false);
+        setError(false);
+        try{
+            const res=await axios.patch(`${currentServer}/user/changeTst`,{id:currentUser.id,testimony:newTst});
+            console.log(res);
+            setLoading(false);
+            res.status==200 && setSuccess(true);
+        }
+        catch(err){
+            console.log(err);
+            setErrMessage(err.message);
+            setError(true);
+            setLoading(false);
+        }
     }
     function passwordOnChange(e){
         setError(false);
@@ -107,13 +133,56 @@ export default function UserProfile(){
 
     return(
         <>
-        <section className="myProfile">
-            <div className="dpdiv">{currentUser? currentUser.username.charAt(0):'D'}</div>
-            <p>{currentUser? currentUser.username: 'Username'}</p>
-            <p>{currentUser? currentUser.email: 'Email'}</p>
-            <p>{currentUser? currentUser.role: 'Role'}</p>
+        <section className="myProfile" style={{fontFamily:'sans-serif'}}>
+            <strong style={{fontSize:'2.5rem'}}>{currentUser? currentUser.username: 'Username'}</strong>
+            <p>{currentUser? currentUser.email: 'Email'}<br/>
+            {currentUser? currentUser.role: 'Role'}</p>
+            <table style={{padding:'1rem'}}>
+                <tbody>
+                    <tr>
+                        <td>Club Role</td>
+                        <td>{currentUser.clubRole}</td>
+                    </tr>
+                    <tr>
+                        <td>Testimonial</td>
+                        <td>{currentUser.comment}</td>
+                    </tr>
+                    <tr>
+                        <td>Rounds Debated</td>
+                        <td>{currentUser.totalDebates}</td>
+                    </tr>
+                    <tr>
+                        <td>Rounds Judged</td>
+                        <td>{currentUser.totalAdjud}</td>
+                    </tr>
+                    <tr>
+                        <td>Rank summary</td>
+                        <td>
+                            Average Rank:{currentUser.totalDebates>0? (currentUser.performance.Rank1 + currentUser.performance.Rank2 + currentUser.performance.Rank3 + currentUser.performance.Rank4)/currentUser.totalDebates :' N/A'}<br/>
+                            {currentUser.totalDebates>0 && <>{currentUser.performance.Rank1} 1sts<br/>
+                            {currentUser.performance.Rank2} 2nds<br/>
+                             {currentUser.performance.Rank3} 3rds<br/>
+                             {currentUser.performance.Rank4} 4ths</>}
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
             <button className="buttonOnBrand" onClick={()=>{
                 setUsnChange(false);
+                setTstChange(true);
+                setPwdChange(false);
+                setDeleting(false);
+                setError(false);
+                setSuccess(false);
+                setErrMessage('Something Went Wrong');
+                    document.getElementById('pwdchange').scrollIntoView({behavior:'smooth'});
+            }}>Change Testimony</button>
+            <button className="buttonOnBrand" onClick={()=>{
+                setUsnChange(false);
+                setTstChange(false);
                 setPwdChange(true);
                 setDeleting(false);
                 setError(false);
@@ -123,6 +192,7 @@ export default function UserProfile(){
             }}>Change Password</button>
             <button className="buttonOnBrand" onClick={()=>{
                 setUsnChange(true);
+                setTstChange(false);
                 setPwdChange(false);
                 setDeleting(false);
                 setError(false);
@@ -133,6 +203,7 @@ export default function UserProfile(){
             <button className="buttonOnBrand" onClick={()=>{
                 setUsnChange(false);
                 setPwdChange(false);
+                setTstChange(false);
                 setDeleting(true);
                 setError(false);
                 setSuccess(false);
@@ -140,6 +211,17 @@ export default function UserProfile(){
                     document.getElementById('deleteAccount').scrollIntoView({behavior:'smooth'}); 
             }} style={{color:'red'}}>Delete Account</button>
             <button className="buttonOnBrand" onClick={logout}>Log Out</button>
+        </section>
+        <section id="tstchange">
+            {tstChange &&<form onSubmit={tstOnSubmit} style={{justifyItems:'center', textAlign:'center'}}>
+                <h2>Change Club Testimonial</h2>
+                <p>Note: Changes will reflect on next log in</p>
+                <input type="text" placeholder="Enter new comment about the club" name='tst' value={newTst} onChange={tstOnChange}/>
+                <button>{loading?'loading':'Change'}</button>
+                <button type="button" onClick={()=>setTstChange(false)} disabled={loading}>Cancel</button>
+                {error && <p style={{color:'red'}}>{errMessage}</p>}
+                {success && <p style={{color:'green'}}>'Testimonial changed Successfully'</p>}
+            </form>}
         </section>
         <section id="pwdchange" style={{justifyItems:'center', textAlign:'center'}}>
             {pwdChange&&<form onSubmit={passwordOnSubmit}>

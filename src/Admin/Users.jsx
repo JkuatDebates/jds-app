@@ -9,14 +9,15 @@ export default function Users(){
     const [users, setUsers]=useState([]);
     const [display, setDisplay]=useState([]);
     const [loading,setLoading]=useState(true);
-    const [updating,setUpdating]=useState(true);
+    const [updating,setUpdating]=useState(false);
     const [serving,setServing]=useState(false);
     const [error,setError]=useState(false);
     const [success,setSuccess]=useState(false);
     const [errorMessage,setErrorMessage]=useState('Something went wrong');
     const [newCreds,setNewCreds]=useState({
         username:'',
-        role:''
+        role:'',
+        clubRole:''
     });
     const filterRef=useRef(null);
     const searchRef=useRef(null);
@@ -78,12 +79,14 @@ export default function Users(){
                 console.log(res1);
             }
             const res2=await axios.patch(`${currentServer}/user/changeRole`,{id:newCreds._id, role:newCreds.role});
-            console.log(res2);
+            const res3=await axios.patch(`${currentServer}/user/changeclubRole`,{id:newCreds._id, clubRole:newCreds.clubRole});
+            console.log(res2 + res3);
             setServing(false);
             setSuccess(true);
             setNewCreds({
                 username:'',
-                role:''
+                role:'',
+                clubRole:''
             });
             getUsers();
         }
@@ -105,7 +108,7 @@ export default function Users(){
                 <option value="editor">Editor</option>
                 <option value="admin">Admin</option>
             </select>
-        </label>
+        </label><br />
         <div className="search">
             <Search/>
             <input type="text" placeholder="Search Username or Email" onChange={render} ref={searchRef} name="search"/>
@@ -114,13 +117,27 @@ export default function Users(){
         <section id='update'>
             {updating && 
             <form onSubmit={formSubmit}>
-                <h3>Update Role</h3>
+                <h3>Update Roles</h3>
                 <p>{newCreds.username}</p>
                 <p>{newCreds.email}</p>
+                <p>User Role</p>
                 <select name="role" value={newCreds.role} onChange={formChange}>
                     <option value="user" >User</option>
                     <option value="editor">Editor</option>
                     <option value="admin">Admin</option>
+                </select>
+                <p>Club Role</p>
+                <select name="clubRole" value={newCreds.clubRole} onChange={formChange}>
+                    <option value="Guest">Guest</option>
+                    <option value="Member">Member</option>
+                    <option value="Alumni">Alumni</option>
+                    <option value="Training and Development Officer">Training and Development Officer</option>
+                    <option value="Public Relations Officer">Public Relations Officer</option>
+                    <option value="Treasurer">Treasurer</option>
+                    <option value="Secretary">Secretary</option>
+                    <option value="Organizing Secretary">Organizing Secretary</option>
+                    <option value="Vice President">Vice President</option>
+                    <option value="President">President</option>
                 </select>
                 <label >Reset Password<input type="checkbox" name="pwd" ref={presetRef}/></label>
                 <p>Note: Checking will reset user's password to <strong>password</strong> as the default</p>
@@ -148,7 +165,8 @@ export default function Users(){
                 <div className='userIcon' >{u.username.charAt(0)}</div>
                 <div>
                     <h3>{u.username}</h3>
-                    <strong>{u.role}</strong>
+                    <strong>{u.role}</strong><br />
+                    <strong>{u.clubRole}</strong>
                     <p>{u.email}</p>
                 </div>
                 
